@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 18, 2019, 12:59:10 AM
+    Author     : genesis
+*/
+.mySpanSohw1
+{
+   color: green;
+    font-weight: 700;
+
+    font-size: 14px;  
+}
+.mySpanSohw
+{
+    color: red;
+    font-weight: 700;
+
+    font-size: 14px;
+
+}
+#MyUser
+{
+    padding-top: 2px;
+    padding-bottom: 17px;
+}
+
+.W50
+{
+    width:47%;
+    display:inline-block;
+}
+.w100
+{
+    width:100%;
+       display: inline!important;
+}
+
+
+@media only screen and (max-width: 525px) {
+ .W50
+{
+    width:100%;
+    display:inline-block;
+}
+}
+@media only screen and (max-width: 600px) {
+    
+}

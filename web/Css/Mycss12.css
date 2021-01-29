@@ -1,0 +1,378 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 23, 2018, 11:09:53 AM
+    Author     : roveena
+*/
+
+
+@media only screen and (max-width: 420px) {
+.HedaerName {
+        color: white;
+        font-size: 17px;
+        font-family: initial;
+    }
+}
+@media only screen and (max-width: 600px) {
+ .HedaerName
+ {
+      color: white;
+        font-size: 17px;
+        font-family: initial;
+ }
+}
+
+.progress-bar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    /* background-color: #007bff; */
+    transition: width .6s ease;
+}
+.mybottmdiv{
+
+    /*/ padding:3px;*/
+    position: fixed;
+    bottom:0px;
+    width:83%
+}
+.d100
+{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.d33
+{
+    width: 31%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: inline-block;
+}
+.d50
+{
+    width:49%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.d20
+{
+    width: 20%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: inline-block;
+}
+.callA
+{
+    color:white;
+    background-color:#5665c1;
+}
+
+.mtchattext
+{
+
+    width: 100%;
+    font-size: 11px;
+    font-weight: 500px;
+
+
+
+    color: white;
+    white-space:normal;
+}
+.mychatbox
+{
+
+
+}
+.chatdiv{
+
+    height: 230px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.chatrow
+{
+    margin-bottom: 5px;
+
+    padding: 4px;
+}
+.sendBtn
+{
+    padding-right:0px;
+    padding-left:0px;
+    margin-top: 10px;
+    margin-left: -13px;
+}
+.myChatHeader
+{
+    color: white;
+}
+
+.HedaerName
+{
+    color:white;
+    font-size: 33px;
+    font-family: initial;
+}
+
+
+.mytopbar
+{
+    background:#3D59AB;
+}
+/*AdminChat*/
+.AdminChat
+{
+    color:cornflowerblue; 
+    font:22px;
+    margin-left:5px;
+    font-weight:800px;
+
+}
+.Amychatbox
+{
+    background-color:cornflowerblue;
+    box-shadow: 0 0.125rem 0.25rem rgb(66, 91, 138);
+
+    border-radius: .25rem;
+    padding:3px;
+
+}
+.AUser
+{
+    color:cornflowerblue; 
+}
+
+
+
+.Mchat
+{
+    color:#6c757d; 
+    font:22px;
+    margin-left:5px;
+    font-weight:800px;
+
+}
+.Mmychatbox
+{
+    background-color:#6c757d;
+    box-shadow: 0 0.125rem 0.25rem rgb(66, 91, 138);
+
+    border-radius: .25rem;
+    padding: 3px;
+
+}
+
+
+
+
+
+
+.Gchat
+{
+    color:#73ed64; 
+    font:22px;
+    margin-left:5px;
+    font-weight:800px;
+
+}
+.Gmychatbox
+{
+    background-color:#73ed64;
+    box-shadow: 0 0.125rem 0.25rem rgb(66, 91, 138);
+
+    border-radius: .25rem;
+    padding: 3px;
+
+}
+
+
+
+
+
+.Cchat
+{
+    color:#edaa64; 
+    font:22px;
+    margin-left:5px;
+    font-weight:800px;
+
+}
+.Cmychatbox
+{
+    background-color:#edaa64;
+    box-shadow: 0 0.125rem 0.25rem rgb(66, 91, 138);
+
+    border-radius: .25rem;
+    padding:3px;
+
+}
+
+
+.CUser
+{
+    margin-top: -25px;
+    color:#edaa64; 
+}
+.GUser
+{
+    margin-top: -25px;
+    color:#73ed64; 
+}
+.AUser
+{
+    margin-top: -25px;
+    color:cornflowerblue; 
+}
+
+.MUser
+{
+    margin-top: -25px;
+    color:#6c757d; 
+}
+
+
+
+.Hrow
+{
+    background-color:white;
+
+}
+.Hrow h5
+{
+    display:inline-block;
+    padding:3px;
+    font-size:14px;
+}
+.Ctchattext
+{
+    color:white;
+    font-size: 12px;
+}
+
+.Gtchattext
+{
+    color:white;
+    font-size: 12px;
+}
+
+.userProfilePic
+{
+    margin-top: -15px;
+    height:45px;
+    width:45px;
+}
+.statusDiv
+{
+    height: 310px;
+    overflow-y: scroll;
+
+
+}
+
+#msgTextArea
+{
+    border:solid 1px green;
+}
+
+.HedingClass
+{
+    color:black;
+    font-size:20px;
+    font-weight:700;
+    color:white;
+}
+.VHeadDetails
+{
+    color: white;
+    border-radius: 64px;
+    background-color: #008a57;
+    padding: 9px;
+}
+
+.mychatimg
+{
+    position: fixed;
+    botoom:55px;
+    right:10px;
+    z-index:1;
+
+}
+
+//For Index Page
+.service-style4 {
+    padding: 100px 0 70px;
+    background: url(../Front/images/dintpat.png) repeat 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+.welboxs {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.hinttag {
+    color: #ccc;
+    color: #222;
+    font-size: 35px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.service-style4 .welpara {
+    font-size: 20px;
+    color: #222;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 40px;
+    margin-bottom: 35px;
+}
+.service-style4 .searvice-wrp {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.service-style4 .service-box {
+    overflow: hidden;
+    background: #fff;
+}
+.service-style4 .service_titile {
+    padding: 30px 30px 20px;
+    position: relative;
+    border: 5px solid #eee;
+    border-top: 0;
+    margin-top: 0px;
+    background: #efd6703b;
+}
+.service-style4 .service-box img {
+    width: 100%;
+    transform: scale(1);
+    border: 5px solid #eee;
+}
+.service-style4 .service-info {
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 20px 35px 20px;
+    text-align: center;
+    -webkit-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease;
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+}

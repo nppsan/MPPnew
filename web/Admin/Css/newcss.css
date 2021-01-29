@@ -1,0 +1,192 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 1, 2019, 4:49:57 PM
+    Author     : genesis
+*/
+
+.MyTitle{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    color: #383866;
+    font-size: 17px;
+    margin: 0;
+    padding:8px;
+}
+
+/*.formBg
+{
+    background-color:#9f8dec75; 
+        padding: 13px;
+}*/
+.formBg{
+    background-image: url("../AppImg/backimg.png");
+/*    background-repeat: no-repeat;
+    background-size:cover;*/
+
+}
+.martop10
+{
+    margin-top: 10px;
+}
+.mb-2{
+    height:42px;
+    border: 1px solid #b9b1b1;
+}
+.SpanClass{
+    font-size:17px;
+    font-weight:600;
+}
+.pClass{
+    font-size:17px;
+    font-weight:400;
+    text-align:justify;
+}
+.ulclass{
+    font-size:17px;
+    font-weight:400; 
+    text-align:justify;
+}
+.myICOnIMG
+{
+    width: 50px;
+    height: 50px;
+}
+.welcomeC
+{
+    font-size:22px;
+    color: #f00c62;
+    font-weight: 700;
+
+}
+
+.hrclass
+{
+    border: 7px solid #6c5b9670;
+}
+
+.MenuLI
+{
+    border-bottom: black 1px solid;
+
+}
+.MenuLIa
+{
+
+   font-size: 14px;
+    margin-left: 15px;
+    color:#3D59AB;
+    font-weight:500;
+}
+.MyMargin{
+    margin-top:0px;
+}
+.MyMarginL{
+/*    margin-top:30px;*/
+}
+.contact_form_page  {
+    height: -webkit-fill-available;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+/*    // background-color: #e3e6e8;
+    background-image: url("../AppImg/backimg.png");*/
+/*    background-repeat: no-repeat;
+    background-size:cover;*/
+    width: 100%;
+   
+    padding-bottom: 0px; 
+}
+.measure_business_sec{
+     height: -webkit-fill-available;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    // background-color: #e3e6e8;
+    background-image: url("../AppImg/backimg.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.case_studies_sec {
+    margin-top: -80px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: #f8fbfd;
+}
+.custom-control-label::before {
+    position: absolute;
+    top: .25rem;
+    left: 0;
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    pointer-events: none;
+    content: "";
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #dee2e6;
+}
+.custom-control-label::after {
+    position: absolute;
+    top: .25rem;
+    left: 0;
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+.d33{
+    width:48%!important;
+       display: inline-grid;
+/*       border:2px solid red;*/
+       padding:5px;
+       margin:2px;
+    
+}
+.d100{
+    width:100%!important;
+    text-align: center;
+     padding:5px;
+}
+
+
+
+.panel-group {
+    width: 100%!important;
+    margin-bottom: 20px;
+}
+.MyUl{
+    font-size:18px !important;
+    font-weight:700 !important;
+    color: #3043ef !important;
+    cursor: pointer !important;
+    
+}
+.MyLi{
+    font-size:18px !important;
+    font-weight:500 !important;
+}
+
+.myhover :hover
+{
+    cursor:pointer !important;
+}
+
+
+
+
+
+
+
+
+
+
