@@ -1,0 +1,1920 @@
+﻿body
+{
+    padding: 0px;
+    margin: 0px;
+}
+#UniconCT_Page
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: block;
+}
+#UniconCT_Helpline
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 50px;
+    display: block;
+    background-color: #1F242C;
+    clear: both;
+}
+.UniconCT_Main
+{
+    padding: 0px;
+    margin: 0px auto 0px auto;
+    width: 1000px;
+    display: block;
+    clear: both;
+}
+.Helpline
+{
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    float: left;
+    font-family: Tahoma;
+    font-size: 13px;
+    color: #999999;
+    line-height: 50px;
+}
+.convert
+
+.Companytxt
+{
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    float: right;
+    font-family: tahoma;
+    font-size: 16px;
+    color: #CCCCCC;
+    line-height: 50px;
+}
+#UniconCT_Head
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: block;
+    background-color: #2D3440;
+    float: left;
+}
+.Logo
+{
+    background-position: left top;
+    padding: 0px 0px 0px 120px;
+    margin: 15px 0px 15px 0px;
+    width: Auto;
+    float: left;
+    color: #E8EEDB;
+    font-size: 33px;
+    font-family: "gill Sans MT";
+    text-decoration: none;
+    background-image: url('../_images/edited-logo.png');
+    background-repeat: no-repeat;
+    height: 100px;
+    line-height: 100px;
+    font-weight: bold;
+}
+.SocialIcons
+{
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+    width: auto;
+    float: right;
+}
+.SocialIcons a
+{
+    font-family: FontAwesome;
+    font-size: 21px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px 0px 0px 15px;
+    width: auto;
+    float: left;
+}
+.SocialIcons a:hover
+{
+    color: #58A75A;
+}
+.UniconCT_Nav
+{
+    padding: 0px;
+    margin: 0px;
+    width: 1000px;
+    height: 50px;
+    float: left;
+    background-color: #FFFFFF;
+}
+.UniconCT_Nav ul
+{
+    padding: 0px;
+    margin: 0px 0px 0px 240px;
+    width: auto;
+    list-style-type: none;
+    display: block;
+}
+.UniconCT_Nav ul li
+{
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    display: block;
+}
+.UniconCT_Nav ul li a
+{
+    padding: 0px 25px 0px 25px;
+    margin: 0px;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-decoration: none;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #3D4958;
+    float: left;
+    width: auto;
+}
+.UniconCT_Nav ul li a:hover
+{
+    padding: 0px 25px 0px 25px;
+    margin: 0px;
+    height: 47px;
+    line-height: 50px;
+    vertical-align: middle;
+    width: auto;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #3D4958;
+}
+#UniconCT_Article
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 400px;
+    float: left;
+    display: block;
+    background-color: #58A75A;
+}
+#UniconCT_Section
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+#UniconCT_Footer
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    background-color: #2D3440;
+    display: block;
+    clear: both;
+}
+.WidgetOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 249px;
+    float: left;
+}
+.Widgettxt
+{
+    padding: 30px 0px 0px 0px;
+    margin: 0px;
+    width: 250px;
+    float: left;
+    vertical-align: middle;
+    text-indent: 22px;
+    color: #FFFFFF;
+    font-family: Tahoma;
+    font-size: 15px;
+    font-weight: bold;
+}
+.Widgetsubtxt
+{
+    padding: 20px 45px 30px 25px;
+    margin: 0px;
+    width: 180px;
+    float: left;
+    line-height: 28px;
+    font-family: "gill Sans MT";
+    font-size: 16px;
+    color: #95A0B5;
+}
+.ArchivesOuter
+{
+    padding: 0px;
+    margin: 0px 0px 0px 30px;
+    width: 240px;
+    float: left;
+}
+.Archivestxt
+{
+    padding: 30px 0px 0px 0px;
+    margin: 0px;
+    width: 250px;
+    float: left;
+    vertical-align: middle;
+    color: #FFFFFF;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+}
+.ArchivesNav
+{
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+    width: 250px;
+    float: left;
+    display: block;
+    font-family: "gill Sans MT";
+}
+.ArchivesNav ul
+{
+    padding: 0px;
+    margin: 0px;
+    width: 250px;
+    list-style-type: none;
+}
+.ArchivesNav ul li
+{
+    padding: 7px 0px 7px 0px;
+    margin: 0px;
+    width: 250px;
+    float: left;
+    display: block;
+    vertical-align: middle;
+}
+.ArchivesNav ul li a
+{
+    padding: 0px;
+    margin: 0px;
+    width: 250px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #95A0B5;
+    font-family: "gill Sans MT";
+    font-size: 15px;
+}
+.ArchivesNav ul li a:hover
+{
+    text-decoration: underline;
+    color: #58A75A;
+}
+.CommentsOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 250px;
+    float: left;
+}
+.Commentstxt
+{
+    padding: 30px 0px 0px 0px;
+    margin: 0px;
+    width: 250px;
+    float: left;
+    vertical-align: middle;
+    color: #FFFFFF;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+}
+.CommentsLinks
+{
+    padding: 0px;
+    margin: 0px;
+    width: 250px;
+    float: left;
+}
+.Anonontxt
+{
+    padding: 0px 100px 0px 0px;
+    margin: 5px 0px 0px 0px;
+    width: 150px;
+    float: left;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+    line-height: 22px;
+}
+.Anonontxt a
+{
+    color: #f35d3a;
+    text-decoration: none;
+}
+.Anonontxt a:hover
+{
+    text-decoration: underline;
+}
+.tellytxt
+{
+    padding: 0px 50px 0px 0px;
+    margin: 15px 0px 0px 0px;
+    width: 200px;
+    float: left;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+    line-height: 22px;
+}
+.tellytxt a
+{
+    color: #f35d3a;
+    text-decoration: none;
+}
+.tellytxt a:hover
+{
+    text-decoration: underline;
+}
+.Alextxt
+{
+    padding: 0px 50px 0px 0px;
+    margin: 15px 0px 0px 0px;
+    width: 200px;
+    float: left;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+    line-height: 22px;
+}
+.Alextxt a
+{
+    color: #f35d3a;
+    text-decoration: none;
+}
+.Alextxt a:hover
+{
+    text-decoration: underline;
+}
+.BlogOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 229px;
+    float: left;
+}
+.Blogtxt
+{
+    padding: 30px 0px 0px 0px;
+    margin: 0px;
+    width: 250px;
+    float: left;
+    color: #FFFFFF;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+}
+.BlogNav
+{
+    padding: 0px;
+    margin: 15px 0px 40px 0px;
+    width: 224px;
+    float: left;
+}
+.BlogNav ul
+{
+    padding: 0px;
+    margin: 0px;
+    width: 224px;
+    list-style-type: none;
+}
+.BlogNav ul li
+{
+    padding: 7px 59px 7px 0px;
+    margin: 0px;
+    width: 166px;
+    float: left;
+}
+.BlogNav ul li a
+{
+    padding: 0px;
+    margin: 0px;
+    width: 166px;
+    text-decoration: none;
+    color: #95A0B5;
+    font-family: fontAwesome;
+    font-size: 14px;
+    float: left;
+}
+.BlogNav ul li a:hover
+{
+    color: #58A75A;
+}
+.LogoCopyOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 1000px;
+    float: left;
+}
+.FootLogo
+{
+    padding: 0px;
+    margin: 35px 0px 0px 0px;
+    width: 150px;
+    float: left;
+    height: 40px;
+    background-image: url('../_images/150px-40px_FootLogo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.CopyrightOuter
+{
+    padding: 0px;
+    margin: 30px 0px 0px 0px;
+    width: 500px;
+    float: left;
+}
+.Designtxt
+{
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    float: right;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #999999;
+    line-height: 50px;
+    height: 50px;
+}
+.Designtxt a
+{
+    color: #58A75A;
+    text-decoration: none;
+    font-family: "gill Sans MT";
+}
+.Copytxt
+{
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    float: left;
+    font-family: "gill Sans MT";
+    font-size: 14px;
+    color: #999999;
+    line-height: 50px;
+    height: 50px;
+}
+.Developedtxt
+{
+    padding: 0px;
+    margin: 5px 0px 0px 0px;
+    width: 350px;
+    display: block;
+    float: left;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+.Developedtxt a
+{
+    color: #f35d3a;
+    text-decoration: none;
+}
+.Developedtxt a:hover
+{
+    text-decoration: underline;
+}
+.UniconCT_AboutArticle
+{
+    padding: 0px;
+    margin: 0px;
+    width: 1000px;
+    height: 200px;
+    background-image: url('../_images/1000px-200px_Article.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: left;
+}
+.UniconCT-Inner
+{
+    padding: 0px;
+    margin: 0px;
+    width: 1000px;
+    display: block;
+    clear: both;
+}
+.AbtArticletxtOuter
+{
+    padding: 0px;
+    margin: 20px 30px 0px 0px;
+    width: 500px;
+    float: left;
+}
+.AbtArticletxt
+{
+    padding: 0px;
+    margin: 0px;
+    width: 500px;
+    font-family: "Monterey BT";
+    font-size: 35px;
+    font-weight: bold;
+    color: #f35d3a;
+    display: block;
+    font-style: italic;
+}
+.AbtArticlesubtxt
+{
+    padding: 20px 0px 0px 0px;
+    margin: 0px;
+    width: 500px;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+    display: block;
+    line-height: 22px;
+    vertical-align: middle;
+}
+.BuyNowbtn
+{
+    padding: 0px;
+    margin: 10px 0px 0px 192px;
+    width: 115px;
+    display: block;
+    background-image: url('../_images/115px-45pxBuybtn.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 45px;
+    line-height: 45px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: Rockwell;
+    font-size: 19px;
+    color: #f35d3a;
+    text-decoration: none;
+}
+.BuyNowbtn:hover
+{
+    color: #3a3a3a;
+}
+.AbtArticleImg
+{
+    padding: 0px;
+    margin: 35px 0px 0px 0px;
+    width: 470px;
+    height: 240px;
+    float: left;
+    display: block;
+    background-image: url('../_images/470px-240px_AbtAtticleImg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#UniconCT_AboutSection
+{
+    padding: 0px;
+    margin: 0px;
+    width: 1000px;
+    display: block;
+    clear: both;
+}
+.LeftBothOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 1000px;
+    display: block;
+    clear: both;
+}
+.LeftSection
+{
+    padding: 0px;
+    margin: 50px 0px 0px 0px;
+    width: 728px;
+    display: block;
+    float: left;
+    border: 1px dotted #dddddd;
+    background-color: #FFFFFF;
+}
+.LeftFeaturestxt
+{
+    padding: 0px;
+    margin: 8px 0px 18px 0px;
+    width: 728px;
+    display: block;
+    vertical-align: middle;
+    color: #f35d3a;
+    font-family: "Monterey BT";
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+    text-indent: 25px;
+}
+.Bootstraptxt
+{
+    padding: 0px;
+    margin: 0px 28px 0px 25px;
+    width: 675px;
+    display: block;
+    line-height: 22px;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+.Bootstraptxt a
+{
+    text-decoration: none;
+    color: #f35d3a;
+}
+.Bootstraptxt a:hover
+{
+    text-decoration: underline;
+}
+.Advancedtxt
+{
+    padding: 0px;
+    margin: 20px 0px 0px 0px;
+    width: 728px;
+    display: block;
+    vertical-align: middle;
+    text-indent: 25px;
+    font-family: Rockwell;
+    font-size: 18px;
+    color: #1b1b1b;
+}
+.FeaturesNav
+{
+    padding: 0px;
+    margin: 20px 28px 20px 25px;
+    width: 675px;
+    display: block;
+    float: left;
+}
+.FeaturesNav ul
+{
+    width: 650px;
+    display: block;
+    padding: 0px;
+    margin: 0px 0px 0px 25px;
+}
+.FeaturesNav ul li
+{
+    padding: 0px 0px 10px 15px;
+    margin: 0px;
+    width: 635px;
+    display: block;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+    background-repeat: no-repeat;
+    background-position: left 5px;
+    background-image: url('../_images/10px-10px_Navbullet.png');
+}
+.FeaturesNav ul li a
+{
+    text-decoration: none;
+    color: #f35d3a;
+}
+.FeaturesNav ul li a:hover
+{
+    text-decoration: underline;
+}
+.Whataretxt
+{
+    padding: 0px 0px 59px 0px;
+    margin: 10px 25px 0px 25px;
+    width: 678px;
+    display: block;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #dddddd;
+}
+.Whataretxt a
+{
+    text-decoration: none;
+    color: #f35d3a;
+}
+.Whataretxt a:hover
+{
+    text-decoration: underline;
+}
+.GNUtxt
+{
+    padding: 0px;
+    margin: 20px 25px 30px 25px;
+    width: 678px;
+    display: block;
+    line-height: 22px;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+.GNUtxt a
+{
+    color: #f35d3a;
+    text-decoration: none;
+}
+.GNUtxt a:hover
+{
+    text-decoration: underline;
+}
+.LeaveCommentsOuter
+{
+    padding: 0px;
+    margin: 20px 0px 0px 0px;
+    width: 730px;
+    display: block;
+    float: left;
+    background-color: #FFFFFF;
+}
+.LeaveCommenttxt
+{
+    padding: 0px;
+    margin: 25px 0px 0px 0px;
+    width: 730px;
+    display: block;
+    vertical-align: middle;
+    text-indent: 25px;
+    font-family: "Monterey BT";
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+    color: #f35d3a;
+}
+.Youraddrtxt
+{
+    padding: 0px;
+    margin: 15px 0px 0px 0px;
+    width: 730px;
+    display: block;
+    vertical-align: middle;
+    text-indent: 25px;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+.CommentstxtboxOuter
+{
+    padding: 0px;
+    margin: 5px 25px 0px 25px;
+    width: 680px;
+    display: block;
+    float: left;
+}
+.NametxtboxOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 680px;
+    display: block;
+    float: left;
+}
+.Nametxt
+{
+    padding: 0px;
+    margin: 10px 0px 5px 0px;
+    width: 680px;
+    display: block;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+.Nametxtbox
+{
+    padding: 0px 10px 0px 10px;
+    margin: 0px;
+    width: 218px;
+    display: block;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #8B8B8B;
+    height: 28px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dddddd #F2F2F2 #F2F2F2 #F2F2F2;
+}
+.MessagetxtboxOuter
+{
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+    width: 680px;
+    display: block;
+    float: left;
+}
+.Messagetxt
+{
+    padding: 0px;
+    margin: 10px 0px 5px 0px;
+    width: 680px;
+    display: block;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+.Msgtxtbox
+{
+    padding: 10px;
+    margin: 0px;
+    width: 658px;
+    display: block;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #8B8B8B;
+    height: 148px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dddddd #F2F2F2 #F2F2F2 #F2F2F2;
+}
+.LeavePostbtn
+{
+    padding: 0px;
+    margin: 10px 0px 40px 0px;
+    width: 130px;
+    height: 35px;
+    display: block;
+    float: left;
+    background-color: #f35d3a;
+    font-family: Rockwell;
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 35px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+}
+.HTMLtagOuter
+{
+    padding: 0px;
+    margin: 20px 0px 0px 0px;
+    width: 680px;
+    display: block;
+    float: left;
+}
+.Youmaytxt
+{
+    padding: 0px;
+    margin: 0px;
+    width: 290px;
+    display: block;
+    float: left;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+.HTMLtag1
+{
+    padding: 0px;
+    margin: 0px;
+    width: 370px;
+    display: block;
+    float: left;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-top-color: #dddddd;
+    border-left-color: #dddddd;
+    background-color: #F7F7F7;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #f35d3a;
+    height: 19px;
+    line-height: 19px;
+    vertical-align: middle;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #dddddd;
+    text-indent: 5px;
+}
+.HTMLtag2
+{
+    padding: 0px;
+    margin: 0px;
+    width: 639px;
+    display: block;
+    float: left;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #dddddd;
+    background-color: #F7F7F7;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #f35d3a;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #dddddd;
+    border-bottom-color: #dddddd;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+.RightSection
+{
+    padding: 0px;
+    margin: 50px 0px 0px 0px;
+    width: 260px;
+    float: left;
+}
+.Searchbox
+{
+    padding: 0px 10px 0px 10px;
+    margin: 0px 0px 0px 40px;
+    width: 170px;
+    height: 29px;
+    display: block;
+    border-top-width: 1px;
+    border-top-color: #dddddd;
+    border-style: solid none none none;
+    font-family: Rockwell;
+    font-size: 13px;
+    color: #3a3a3a;
+}
+.SectionPagetxt
+{
+    padding: 0px 0px 15px 0px;
+    margin: 0px;
+    width: 260px;
+    display: block;
+    font-family: "monterey BT";
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+    color: #f35d3a;
+    vertical-align: middle;
+    text-indent: 50px;
+}
+.SectionPage
+{
+    padding: 0px;
+    margin: 0px 0px 0px 40px;
+    width: 220px;
+    display: block;
+    float: left;
+}
+.SectionPage ol
+{
+    padding: 0px;
+    margin: 0px;
+    width: 220px;
+    display: block;
+}
+.SectionPage ol li
+{
+    padding: 0px 0px 5px 10px;
+    margin: 0px;
+    width: 180px;
+    display: block;
+}
+.SectionPage ol li a
+{
+    padding: 0px 0px 5px 10px;
+    margin: 0px;
+    width: 180px;
+    display: block;
+    font-family: Rockwell;
+    font-size: 14px;
+    text-decoration: none;
+    color: #f35d3a;
+}
+.SectionPage ol li a:hover
+{
+    text-decoration: underline;
+}
+#UniconCT_ContactOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 54px;
+}
+.ContactLinks
+{
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+    width: 1000px;
+    display: block;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+    float: left;
+}
+.ContactLinks a
+{
+    color: #f35d3a;
+    text-decoration: none;
+}
+.ContactLinks a:hover
+{
+    text-decoration: underline;
+}
+.ContactVideo
+{
+    padding: 0px;
+    margin: 20px 0px 40px 0px;
+    width: 1000px;
+    height: 670px;
+    display: block;
+    background-image: url('../_images/1000px-670px_Video.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: left;
+}
+.ContactVideo:hover
+{
+    background-image: url('../_images/1000px-670px_Video-hover.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.HRIPOuter
+{
+    padding: 0px 0px 30px 0px;
+    margin: 0px;
+    width: 998px;
+    display: block;
+    background-color: #FFFFFF;
+    border: 1px solid #dddddd;
+    float: left;
+}
+.HRIPInnerOuter
+{
+    padding: 0px;
+    margin: 0px 0px 0px 20px;
+    width: 220px;
+    display: block;
+    float: left;
+}
+.HRIPtxts
+{
+    padding: 0px;
+    margin: 20px 0px 0px 0px;
+    width: 220px;
+    display: block;
+    font-family: "monterey BT";
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+    color: #f35d3a;
+}
+.HRIPsubtxts
+{
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+    width: 220px;
+    display: block;
+    font-family: "monterey BT";
+    font-size: 20px;
+    font-style: italic;
+    color: #f35d3a;
+    font-weight: bold;
+}
+.HRIPsubdata
+{
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+    width: 220px;
+    display: block;
+    line-height: 22px;
+    vertical-align: middle;
+    font-family: Rockwell;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+.HRIPReadbtn
+{
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+    width: 220px;
+    display: block;
+    font-family: Rockwell;
+    font-size: 14px;
+    text-decoration: none;
+    color: #f35d3a;
+}
+.HRIPReadbtn:hover
+{
+    text-decoration: underline;
+}
+.ConctLeftSect
+{
+    padding: 0px;
+    margin: 40px 0px 0px 0px;
+    width: 728px;
+    display: block;
+    float: left;
+    border: 1px solid #dddddd;
+    background-color: #FFFFFF;
+    height: 98px;
+    vertical-align: middle;
+    text-indent: 25px;
+    font-family: "monterey BT";
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    color: #f35d3a;
+    line-height: 65px;
+}
+.ConctRightSect
+{
+    padding: 0px;
+    margin: 40px 0px 0px 0px;
+    width: 270px;
+    display: block;
+    float: left;
+}
+.CertificateOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 350px;
+    float: left;
+    display: block;
+}
+.Certificate
+{
+    padding: 0px;
+    margin: 22px 0px 0px 50px;
+    width: 250px;
+    float: left;
+}
+.HTMLCSSCerti
+{
+    padding: 0px;
+    margin: 15px 0px 0px 10px;
+    width: 100px;
+    float: left;
+    border-style: none;
+    height: 30px;
+    display: block;
+}
+.AboutLeftBothOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 740px;
+    display: block;
+    float: left;
+}
+#UniconCT_Copy
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: block;
+    clear: both;
+    background-color: #1F242C;
+    height: 50px;
+}
+.Copytxt b
+{
+    color: #58A75A;
+    font-weight: normal;
+    font-family: "gill Sans MT";
+}
+.NJAimg
+{
+    background-position: center center;
+    padding: 0px;
+    margin: 50px 0px 0px 0px;
+    width: 300px;
+    height: 300px;
+    float: left;
+    background-image: url('../_images/img.png');
+    background-repeat: no-repeat;
+}
+.WelcomeNJA
+{
+    padding: 0px;
+    margin: 40px 0px 50px 0px;
+    width: 650px;
+    float: left;
+}
+.Welcometxt
+{
+    padding: 0px;
+    margin: 0px;
+    width: 650px;
+    float: left;
+    font-family: "gill Sans MT";
+    font-size: 21px;
+    font-weight: bold;
+    color: #1F242C;
+}
+.Welcomesubtxt
+{
+    padding: 0px;
+    margin: 15px 0px 0px 0px;
+    width: 650px;
+    float: left;
+    line-height: 23px;
+    font-family: "gill Sans MT";
+    font-size: 19px;
+    color: #505C72;
+}
+.Abouttxt
+{
+    padding: 0px;
+    margin: 50px 0px 0px 0px;
+    width: 1000px;
+    float: left;
+    font-family: "gill Sans MT";
+    font-size: 18px;
+    font-weight: bold;
+    color: #1F242C;
+}
+.Aboutsubtxt1
+{
+    padding: 0px;
+    margin: 15px 0px 0px 0px;
+    width: 1000px;
+    float: right;
+    line-height: 22px;
+    font-family: "gill Sans MT";
+    font-size: 18px;
+    color: #505C72;
+    display: block;
+}
+.Aboutsubtxt2
+{
+    padding: 0px;
+    margin: 15px 0px 50px 0px;
+    width: 1000px;
+    float: left;
+    line-height: 22px;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #505C72;
+}
+.MapFormOuter
+{
+    padding: 0px;
+    margin: 50px 0px 0px 0px;
+    width: 500px;
+    float: left;
+}
+.Map
+{
+    padding: 0px;
+    margin: 0px;
+    width: 500px;
+    height: 405px;
+    float: left;
+}
+.ContactFormOuter
+{
+    padding: 0px;
+    margin: 50px 0px 0px 70px;
+    width: 430px;
+    float: left;
+}
+.Requiredtxt
+{
+    padding: 0px;
+    margin: 0px 0px 10px 0px;
+    width: 430px;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #505C72;
+    float: left;
+}
+.Requiredtxt b
+{
+    color: #1F242C;
+    font-weight: normal;
+    font-family: "gill Sans MT";
+}
+.FormOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 430px;
+    float: left;
+}
+.Formtxts
+{
+    padding: 0px;
+    margin: 0px;
+    width: 110px;
+    float: left;
+}
+.Formtxts ul
+{
+    padding: 0px;
+    margin: 0px;
+    width: 110px;
+    list-style-type: none;
+}
+.Formtxts ul li
+{
+    padding: 0px;
+    margin: 10px 0px 17px 0px;
+    width: 110px;
+    float: left;
+    font-family: "Segoe UI";
+    font-size: 13px;
+    color: #454545;
+}
+.FormtxtboxOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 310px;
+    float: left;
+}
+.txtbox
+{
+    padding: 0px 10px 0px 10px;
+    margin: 0px;
+    width: 378px;
+    height: 38px;
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #505C72 #949494 #949494 #949494;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #505C72;
+}
+.msgbox
+{
+    padding: 10px;
+    margin: 3px;
+    width: 378px;
+    height: 98px;
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #505C72 #949494 #949494 #949494;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #505C72;
+}
+.Sendbtn
+{
+    padding: 0px;
+    margin: 18px 0px 0px 10px;
+    width: 110px;
+    height: 30px;
+    float: right;
+    background-color: #2b95ff;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-size: 13px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 2px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: #006AD5;
+}
+.Sendbtn:hover
+{
+    background-color: #454545;
+    color: #FFFFFF;
+    border-radius: 2px;
+}
+.CompanyInfoOuter
+{
+    padding: 0px;
+    margin: 50px 0px 50px 0px;
+    width: 400px;
+    float: left;
+}
+.CompanyName
+{
+    padding: 0px;
+    margin: 0px;
+    width: 400px;
+    font-family: "gill Sans MT";
+    font-size: 19px;
+    color: #1F242C;
+    float: left;
+    font-weight: bold;
+}
+.CompAddr
+{
+    padding: 0px;
+    margin: 10px 0px 5px 0px;
+    width: 400px;
+    font-family: "gill Sans MT";
+    font-size: 16px;
+    color: #1F242C;
+    line-height: 24px;
+    float: left;
+}
+.CompTFE
+{
+    padding: 0px;
+    margin: 0px;
+    width: 80px;
+    font-family: Tahoma;
+    font-size: 16px;
+    color: #1F242C;
+    float: left;
+    line-height: 24px;
+}
+.CompTFEtxt
+{
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    font-family: "gill Sans MT";
+    font-size: 16px;
+    color: #1F242C;
+    float: left;
+    line-height: 24px;
+}
+.CompTFEtxt a
+{
+    text-decoration: none;
+    color: #2b95ff;
+}
+.lefttxtbox
+{
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    width: 430px;
+    float: left;
+}
+.txt
+{
+    padding: 0px;
+    margin: 0px 0px 3px 0px;
+    width: 430px;
+    float: left;
+    font-family: "gill Sans MT";
+    font-size: 14px;
+    color: #505C72;
+}
+.btnSend
+{
+    padding: 0px;
+    margin: 35px 25px 0px 0px;
+    width: 100px;
+    height: 35px;
+    float: right;
+    border-style: none;
+    background-color: #58A75A;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+btnSend:hover
+{
+    color: #4A8C4D;
+}
+.Accordian
+{
+    padding: 0px;
+    margin: 0px;
+    width: 450px;
+    float: left;
+}
+.CalcOuter
+{
+    border: 1px solid #999999;
+    padding: 0px;
+    margin: 50px 0px 50px 0px;
+    width: 520px;
+    float: left;
+    background-color: #FAFBFE;
+}
+.CalcForm
+{
+    padding: 0px;
+    margin: 30px 0px 0px 49px;
+    width: 450px;
+    float: left;
+}
+.CalcNav
+{
+    padding: 0px;
+    margin: 0px;
+    width: 225px;
+    float: left;
+}
+.CalcNav ul
+{
+    padding: 0px;
+    margin: 0px;
+    width: 225px;
+    display: block;
+    list-style-type: none;
+}
+.CalcNav ul li
+{
+    padding: 0px;
+    margin: 2px 0px 28px 0px;
+    width: 225px;
+    float: left;
+    font-family: "gill Sans MT";
+    font-size: 17px;
+    color: #454545;
+}
+.CalctxtboxOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 200px;
+    float: right;
+}
+.Calctxtbox
+{
+    padding: 0px;
+    margin: 2px 0px 20px 0px;
+    width: 198px;
+    height: 33px;
+    float: left;
+    border: 1px solid #999999;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #454545;
+}
+.btnCalc
+{
+    border-style: none;
+    padding: 0px;
+    margin: 0px;
+    width: 90px;
+    height: 35px;
+    float: right;
+    background-color: #e90504;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.btnCalc:hover
+{
+    background-color: #4A8C4D;
+}
+.OutputNav
+{
+    padding: 0px;
+    margin: 0px 0px 0px 25px;
+    width: 200px;
+    float: left;
+}
+.CalcHeadtxt
+{
+    padding: 0px;
+    margin: 30px 0px 0px 49px;
+    width: 450px;
+    float: left;
+    font-family: "gill Sans MT";
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #1F242C;
+}
+.OutputNav ul
+{
+    padding: 0px;
+    margin: 0px;
+    width: 200px;
+    display: block;
+    list-style-type: none;
+}
+.OutputNav ul li
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color:#999999;
+    padding: 0px;
+    margin: 5px 0px 28px 0px;
+    width: 200px;
+    float: left;
+    text-indent:10px;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #58A75A;
+}
+.Servicestxt
+{
+    padding: 0px;
+    margin: 50px 0px 0px 0px;
+    width: 1000px;
+    float: left;
+    font-family: Tahoma;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1F242C;
+}
+.InfoOuter
+{
+    padding: 0px;
+    margin: 0px;
+    width: 1000px;
+    float: left;
+}
+.Infotxt
+{
+    padding: 0px;
+    margin: 30px 0px 10px 0px;
+    width: 1000px;
+    float: left;
+    font-family: Tahoma;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1F242C;
+}
+.AboutInfoNav
+{
+    padding: 0px;
+    margin: 0px;
+    width: 1000px;
+    float: left;
+}
+.AboutInfoNav ul
+{
+    padding: 0px;
+    margin: 0px;
+    width: 1000px;
+    display: block;
+    list-style-type: none;
+}
+.AboutInfoNav ul li
+{
+    padding: 0px;
+    margin: 0px 0px 7px 0px;
+    width: 1000px;
+    float: left;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #505C72;
+}
+.Aboutsubtxt3
+{
+    padding: 0px;
+    margin: 0px 0px 50px 0px;
+    width: 1000px;
+    float: left;
+    line-height: 22px;
+    font-family: Tahoma;
+    font-size: 14px;
+    color: #505C72;
+}
+#ServicesImg
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 300px;
+    display: block;
+    clear: both;
+    background-color: #389E45;
+}
+
+.LoginOuter
+{
+    padding: 0px;
+    margin: 20px 20px 0px 0px;
+    width: 350px;
+    float: left;
+}
+.LoginSignuptxt
+{
+    padding: 0px;
+    margin: 0px;
+    width: 330px;
+    float: left;
+    height: 34px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #E5E5E5;
+}
+.LoginSignuptxt a
+{
+    padding: 0px;
+    margin: 0px;
+    width: 125px;
+    float: left;
+    height: 34px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #757575;
+    line-height: 32px;
+    vertical-align: middle;
+    text-align: center;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: #fff;
+}
+.LoginSignuptxt a:hover, .LoginSignuptxt a.curnt
+{
+    color: #3a3a3a;
+    background-color: #EFEFEF;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: #e90504;
+    height: 32px;
+    font-size:large;
+}
+.LoginRegForm
+{
+    padding: 20px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
+    width: 400px;
+    float: left;
+    font-size: 18px;
+    font-family: "gill Sans MT";
+}
+.ownerinfo
+{
+    padding: 0px;
+    margin: 50px 0px 0px 0px;
+    width: 1000px;
+    float: left;
+}
+.photo
+{
+    padding: 0px;
+    margin: 0px 0px 20px 340px;
+    width: 320px;
+    height: 320px;
+    background-image: url('../_images/jai-bali-raja.png');
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.aboutowner
+{
+    padding: 0px;
+    margin: 0px;
+    width: 1000px;
+    float: left;
+    text-align: center;
+    color: #3D4958;
+    font-size: 22px;
+    font-family: "gill Sans MT";
+    text-decoration: none;
+    font-weight: bold;
+}
+.companyname
+{
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+    font-size: 20px;
+    color: #808080;
+    width: 400px;
+    text-align: center;
+}
+.compnayname
+{
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    width: 1000px;
+    text-align: center;
+    float: left;
+    color: #FF1A1A;
+    font-family: "gill Sans MT";
+}
+.VideoGallery
+{
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    display: block;
+    float: left;
+    background-color: #333333;
+}
+.videotxt
+{
+    padding: 0px;
+    margin: 10px auto 0px auto;
+    width: 1000px;
+    height: 70px;
+    display: block;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 70px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "gill Sans MT";
+}
+.convert
+{
+    padding: 0px;
+    margin: 0px;
+    float: inherit;
+}
+.convert
+{
+    padding: 0px;
+    margin: 0px;
+}
+.Companytxt
+{
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    float: right;
+    font-family: Tahoma;
+    font-size: 13px;
+    color: #999999;
+    line-height: 50px;
+}
+.Converttxt
+{
+    padding: 0px;
+    margin: 0px 0px 0px 200px;
+    width: auto;
+    float: left;
+    font-family: Tahoma;
+    font-size: 13px;
+    color: #999999;
+    line-height: 50px;
+}
+.langstyle
+{
+    text-decoration: none;
+    font-family: "gill Sans MT";
+    font-size: 13px;
+    padding: 0px;
+    margin: 0px;
+    color: #FFFFFF;
+    line-height: 50px;
+}
+.langstyle:hover,.langstyle.current
+{
+    text-decoration: none;
+    color: #58A75A;
+}
+.rahinomatimg
+{
+    padding: 0px;
+    margin: 20px 0px 0px 0px;
+}
+.abtcerti
+{
+    padding: 0px;
+    margin: 0px;
+    width: 500px;
+    height: 500px;
+}
+.NJcerti
+{
+    background-position: center center;
+    padding: 0px;
+    margin: 50px 0px 0px 0px;
+    width: 300px;
+    height: 200px;
+    float: left;
+    background-image: url('../_images/certi.jpg');
+    background-repeat: no-repeat;
+    display: block;
+}
+.leftimgpanel
+{
+    padding: 0px;
+    margin: 0px 0px 100px 0px;
+    width: 350px;
+    display: block;
+    float: left;
+}
+#testimonial
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    float: left;
+    display: block;
+    background-color: #D0E3E6;
+}
+#PhotoGallery
+{
+    padding: 0px;
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    display: block;
+    clear: both;
+}
+#banner
+{
+    padding: 0px;
+    margin: 50px 0px 0px 0px;
+    float: left;
+    width: 100%;
+    display: block;
+}

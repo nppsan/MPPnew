@@ -40,7 +40,7 @@
             </ul>
         </li>-->
 
-   <li>
+        <li>
             <!--<a href="ViewEnquiry.jsp" class="waves-effect">-->
             <a href="AdminHome.jsp" class="waves-effect">
                 <i class="icon-note"></i> <span>Dashboard</span> 
@@ -101,10 +101,17 @@
                     </a>
                 
         </li>-->
-        
+            <li>
+            <a href="Customers.jsp" class="waves-effect">
+                <i class="icon-note"></i> <span>Clients</span> 
+            </a></li>
           <li>
             <a href="Bill.jsp" class="waves-effect">
                 <i class="icon-note"></i> <span>Bill</span> 
+            </a></li>
+            <li>
+            <a href="Feedback.jsp" class="waves-effect">
+                <i class="icon-note"></i> <span>Feedback</span> 
             </a></li>
              <li>
             <a href="../AdminLogoutServlet" class="waves-effect">

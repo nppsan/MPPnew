@@ -11,7 +11,7 @@
 <%@page import="java.util.List"%>
 <%@page import="Com.Admin.Dao.CartDao"%>
 <%@page import="Com.Admin.Model.CartModel"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>   
 
 <script src="../../Admin/js/Alertajax.js" type="text/javascript"></script>
 
@@ -47,24 +47,24 @@
         
         cd.save(c);
         
-        SaleProductModel sp = new SaleProductModel();
-        SalesModel sm = new SalesModel();
-        
-        sm.setInvNum(invNum);
-        
-        sp.setAmt(amt);
-        sp.setDisco(disco);
-        sp.setInvNum(invNum);
-        sp.setPname(pname);
-        sp.setPrate(prate);
-        sp.setQuant(quant);
-        sp.setSac(sac);
-        sp.setSalesmodel(sm);
-        
-        SaleProductDao spd = new SaleProductDao();
-        SalesDao sd = new SalesDao();
-        sd.save(sm);
-        spd.save(sp);
+//        SaleProductModel sp = new SaleProductModel();
+//        SalesModel sm = new SalesModel();
+//        
+//        //sm.setInvNum(invNum);
+//        
+//        sp.setAmt(amt);
+//        sp.setDisco(disco);
+//        sp.setInvNum(invNum);
+//        sp.setPname(pname);
+//        sp.setPrate(prate);
+//        sp.setQuant(quant);
+//        sp.setSac(sac);
+//        //sp.setSalesmodel(sm);
+//        
+//        SaleProductDao spd = new SaleProductDao();
+//        SalesDao sd = new SalesDao();
+//        sd.save(sm);
+//        spd.save(sp);
 %>
 <table  width="100%">
     <th ></th>
@@ -122,21 +122,22 @@
              
             });  
             
-            $('#document').ready(function() {
-//  
+//            $('#document').ready(function() {
+////  
+//            $('#cnfcartbtn').click(function() {
+//
+//                        
+//            });
+//        });
+        
+        $('#document').ready(function() {
+  
             $('#cnfcartbtn').click(function() {
-//                function del(){
-//                alert('click');
-//                $( ".cart" ).each(function( ) {
-//                if ($ (this).click()) {
-                //var id = $(this).id;
-//            }
-//                 alert('MainPage_'+username);
-//                $(".loader").show();
-                    alert("cart confirmed");
+                   alert('confirm cart clicked');
+                
 
                 $.ajax({
-                    url: "Ajax/ConfirmCartAjax.jsp",
+                    url: "Ajax/FinalCartAjax.jsp",
                     type: "post",
                     data: {},
                     complete: function(jqXHR, textStatus) {
@@ -148,20 +149,19 @@
                     success: function(response) {
 //                        alert('hi112')
 //                        $(".loader").hide();
-//                        $("#tb2").hide();
-//                        $("#form1").show();
-//                        $("#output").html(response);
+                        //$("#tb2").hide();
+                        //$("#form1").show(); invNum pname prate quant amt disco
                         var url = 'Invoice.jsp';
                         $(location).prop('href', url);
+                        
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
                         console.log(textStatus, errorThrown);
                         alert("Something Went Wrong...!!!");
                     }
-                });
+                    });
 
-//    } 
-//            }
+
+                });
             });
-        });
      </script>

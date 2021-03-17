@@ -1,8 +1,10 @@
+ <%@page import="Com.Admin.Dao.SalesDao"%>
+<%@page import="Com.Admin.Model.SalesModel"%>
 <%-- 
     Document   : Category
     Created on : Nov 23, 2020, 1:28:07 PM
     Author     : npp
---%>
+--%> 
 
 <%@page import="Com.Admin.Dao.CustDetailsDao"%>
 <%@page import="Com.Admin.Model.CustDetailsModel"%>
@@ -22,26 +24,12 @@
         <meta name="author" content=""/>
         <%@include file="Title.jsp" %>
         <!-- simplebar CSS-->
+        <!-- simplebar CSS-->
         <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
         <!-- Bootstrap core CSS-->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
         <!--Data Tables -->
         <link href="assets/plugins/bootstrap-datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
-        <link href="assets/plugins/bootstrap-datatable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <!--<link href="assets/plugins/bootstrap-datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css">-->
-        <script src="assets/plugins/bootstrap-datatable/js/jquery.dataTables.min.js" type="text/javascript"></script>
-        <script src="assets/plugins/bootstrap-datatable/js/dataTables.bootstrap5.min.js" type="text/javascript"></script>
-        <script src="assets/plugins/bootstrap-datatable/js/jquery-3.5.1.js" type="text/javascript"></script>
-<!--    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
-        <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js" type="text/javascript"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>-->
-
-<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" >
-        <link href="component/DataTables/jquery.dataTables.min.css" rel="stylesheet" >
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" ></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>-->
-
         <link href="assets/plugins/bootstrap-datatable/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
         <!-- animate CSS-->
         <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
@@ -51,9 +39,6 @@
         <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
         <!-- Custom Style-->
         <link href="assets/css/app-style.css" rel="stylesheet"/>
-        <script src="js/Alertajax.js" type="text/javascript"></script>
-        <link href="Css/newcss.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="/styleN.css" type="text/css">
           
       <style>
           #div-tb { margin-top: 50px;}
@@ -67,11 +52,14 @@
     <body>
         <!-- Start wrapper-->
         <%
-        List<CustDetailsModel> s2 = new CustDetailsDao().getAll();
+        List<SalesModel> s2 = new SalesDao().getAll();
         int max=s2.size();
-        CustDetailsModel cd = new CustDetailsModel();
+        int inv;
+        if(max==0){inv = 1000;}
+        else{
+        SalesModel cd = new SalesModel();
         cd=s2.get(max-1);
-        int inv = cd.getInvNum();
+        inv = cd.getInvNum();}
         inv+=1;
         %>
         <!--<h1><%//=max%></h1>-->
@@ -97,7 +85,7 @@
             
                 <!--<h3 style="text-align: center; color: #2c527d">ADD CUSTOMER DETAILS</h3>-->
                 <div style="margin-left: 35%" >
-                   <button id="existing" onclick="showTb()" type="button" class="btn btn-primary waves-effect waves-light m-1">Existing Customer</button>
+                    <button id="existing" onclick="showTb()" type="button" class="btn btn-primary waves-effect waves-light m-1">Existing Customer</button>
                 
                     <button id="new" onclick="showForm()" type="button" class="btn btn-success waves-effect waves-light m-1"> New Customer </button>
                 </div>
@@ -106,12 +94,14 @@
                 <div class="container">
                 
                 <div id="div-tb">
-                    <table id="tb2" class ='table table-striped ' style='display: none; margin: auto; padding: 5px 5px 5px 5px; width:30%; text-align: center; '>
+                    <table id="tb2" class ='table table-striped' style='display: none; margin: auto; padding: 5px 5px 5px 5px; width:30%; text-align: center; '>
                 
-                
-                <th> Customer Name <i class="fa fa-sort" aria-hidden="false"></i></th>
+                        <thead>
+                        <th> Customer Name <i class="fa fa-table" aria-hidden="false"></i></th>
               
-                <th>   Select </th> 
+                        <th>   Select </th>
+                </thead>
+                <tbody>
 
                 <%
 
@@ -136,7 +126,7 @@
 <%
                     }   
 %>
-
+                </tbody>
                     </table> 
                     </div>
                
@@ -152,65 +142,62 @@
 				   <hr>
                                                
 				    <!--<form>-->
+                                        <div class="form-group row">
+                                        <label  class="col-sm-6 col-form-label">Personal Details</label>
+                                        </div>
 					 <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">Name</label>
-					  <div class="col-sm-10">
-						<input name="cname" type="text" class="form-control" id="cname" placeholder="Enter Customer Name">
+					  <!--<label for="input-4" class="col-sm-2 col-form-label">Name</label>-->
+					  <div class="col-sm-3">
+						<input name="cname" type="text" class="form-control" id="cname" placeholder="Name">
+					  </div>
+                                          <div class="col-sm-3">
+						<input name="cemail" type="text" class="form-control" id="cemail" placeholder="Email">
+					  </div>
+                                          <div class="col-sm-3">
+						<input type="text" name="cmobile" class="form-control" id="cmobile" placeholder="Mobile">
 					  </div>
 					</div>
 					<div class="form-group row">
-					  <label for="input-5" class="col-sm-2 col-form-label">Email</label>
-					  <div class="col-sm-10">
-						<input name="cemail" type="text" class="form-control" id="cemail" placeholder="Enter Customer Email Address">
-					  </div>
-					</div>
+                                        <label  class="col-sm-6 col-form-label">Address Details</label>
+                                        </div>
 					<div class="form-group row">
-					  <label for="input-6" class="col-sm-2 col-form-label">Mobile</label>
-					  <div class="col-sm-10">
-						<input type="text" name="cmobile" class="form-control" id="cmobile" placeholder="Enter Mobile Number">
+					  <!--<label for="input-4" class="col-sm-2 col-form-label">Customer's A/P</label>-->
+					  <div class="col-sm-3">
+						<input type="text" name="cap" class="form-control" id="cap" placeholder="Address Line 1">
+					  </div>
+                                          <div class="col-sm-3">
+						<input type="text" name="ctal" class="form-control" id="ctal" placeholder="Taluka">
+					  </div>
+                                          <div class="col-sm-3">
+						<input type="text" name="cdist" class="form-control" id="cdist" placeholder="District">
 					  </div>
 					</div>
-					<div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">Customer's A/P</label>
-					  <div class="col-sm-10">
-						<input type="text" name="cap" class="form-control" id="cap" placeholder="Enter Customer At Post">
+                                        
+                                        <div class="form-group row">
+					  <!--<label for="input-4" class="col-sm-2 col-form-label">Customer's GSTN/AADHAR Number</label>-->
+					  <div class="col-sm-3">
+						<input type="text" name="cstate" class="form-control" id="cstate" placeholder="State">
+					  </div>
+                                          <div class="col-sm-3">
+						<input type="text" name="cstcode" class="form-control" id="cstcode" placeholder="State Code">
+					  </div>
+                                          
+					</div>
+                                        <div class="form-group row">
+                                        <label  class="col-sm-6 col-form-label">Identification Details</label>
+                                        </div>
+                                        <div class="form-group row">
+					  <!--<label for="input-4" class="col-sm-2 col-form-label">State</label>-->
+					  <div class="col-sm-3">
+						<input type="text" name="cgstaadhar" class="form-control" id="cgstaadhar" placeholder="GSTN/AADHAR">
 					  </div>
 					</div>
-                                    <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">Customer's Taluka</label>
-					  <div class="col-sm-10">
-						<input type="text" name="ctal" class="form-control" id="ctal" placeholder="Enter Customer Taluka">
-					  </div>
-					</div>
-                                    <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">Customer's District</label>
-					  <div class="col-sm-10">
-						<input type="text" name="cdist" class="form-control" id="cdist" placeholder="Enter Customer District">
-					  </div>
-					</div>
-                                    <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">Customer's GSTN/AADHAR Number</label>
-					  <div class="col-sm-10">
-						<input type="text" name="cgstaadhar" class="form-control" id="cgstaadhar" placeholder="Enter Customer GSTN/AADHAR">
-					  </div>
-					</div>
-                                    <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">State</label>
-					  <div class="col-sm-10">
-						<input type="text" name="cstate" class="form-control" id="cstate" placeholder="Enter Customer State">
-					  </div>
-					</div>
-                                    <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">State Code</label>
-					  <div class="col-sm-10">
-						<input type="text" name="cstcode" class="form-control" id="cstcode" placeholder="Enter Customer State Code">
-					  </div>
-					</div>
+                                        
                                     </div>
                             	 </div>
 			   </div>
 			<div class="form-group row">
-                            <label for="input-1" class="col-sm-2 col-form-label"></label>
+                            <!--<label for="input-1" class="col-sm-2 col-form-label"></label>-->
                               <div class="col-sm-10">
 				<button type="button" id="btn1" onclick="showForm2()" class="btn btn-primary shadow-primary px-5"><i class="icon-lock"></i> SAVE & NEXT</button>
                               </div>
@@ -222,11 +209,8 @@
                 
                     </form>
                         
-                
-                        
                     <form style="display: none;" id="form2" > 
-                    
-                    <div style="float:right; display:inline"  class="col-sm-9">
+                    <div style="float:right; display:inline" class="col-sm-9">
                         <input style="width:100px; float:right" name="innumber" value="<%=inv%>" type="text" id="invNum" readonly="readonly" class="form-control">
                         <!--<label style="float:right" for="readonly-input" class="col-sm-3 col-form-label">Invoice Number</label>-->
 			
@@ -235,108 +219,107 @@
 				   <div class="card-title">BILLING DETAILS</div>
 				   <hr>
 				    <!--<form>-->
-					 <div class="form-group row">
+					<div class="form-group row">
 					  <label for="input-4" class="col-sm-2 col-form-label">Bill Date</label>
-					  <div class="col-sm-10">
+					  <div class="col-sm-3">
                                               <input style="width: fit-content;" name="invDate" type="date" class="form-control"  id="invDate" >
 					  </div>
-					</div>
+                                          <label for="suppDate" class="col-sm-3 col-form-label">SUPPLY DATE</label>
+                                          <input style="width: fit-content;" name="suppDate" type="date" class="form-control" id="suppDate" >
+                                        </div>
+                                        
 					<div class="form-group row">
-					  <label for="input-5" class="col-sm-2 col-form-label">RETURN CHARGES</label>
-					  <div class="col-sm-10">
-                                                <select name="reverseCharge" class="form-control" id="reverseCharge">
+					  <label for="input-5" class="col-sm-3 col-form-label">RETURN CHARGES</label>
+<!--                                          <style>
+                                                select:invalid { color: gray; }
+                                          </style>-->
+                                            
+                                            
+					</div>
+                                        <div class="form-group row">
+					  
+                                          <div class="col-sm-2">
+                                              <select name="reverseCharge" class="form-control" id="reverseCharge">
+                                                    <!--<option value="" disabled selected hidden>RETURN CHARGES</option>-->
                                                     <option value="N/A">N/A</option>
                                                     <option value="YES">YES</option>
                                                     
                                                 </select>
-						<!--<input name="cemail" type="text" class="form-control"  placeholder="Enter Customer Email Address">-->
-					  </div>
-					</div>
-					<div class="form-group row">
-					  <label for="input-6" class="col-sm-2 col-form-label">BILLING STATE</label>
-					  <div class="col-sm-10">
-                                              <input type="text"  name="invState" class="form-control" id="invState" placeholder="Enter Billing State">
-					  </div>
-					</div>
-					<div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">BILLING STATE CODE</label>
-					  <div class="col-sm-10">
-						<input type="text" name="invStateCode" class="form-control" id="invStateCode" placeholder="Enter Billing State Code">
-					  </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+					  <label for="input-4" class="col-sm-4 col-form-label">MODE OF TRANSPORT</label>
+					  
+                                          
 					</div>
                                         <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">MODE OF TRANSPORT</label>
-					  <div class="col-sm-10">
+					  
+                                          <div class="col-sm-3">
                                               <select name="modeOfTx" class="form-control" id="modeOfTx">
                                                     <option value="BY ROAD">BY ROAD</option>
                                                     <option value="BY RAIL">BY RAIL</option>
                                                     <option value="BY AIR">BY AIR</option>
                                                     <option value="BY SHIP">BY SHIP</option>
                                                     </select>
+                                              
 						<!--<input type="text" name="ctal" class="form-control" id="input-b5" placeholder="Enter Customer Taluka">-->
 					  </div>
+                                            <!--<label for="input-4" class="col-sm-1 col-form-label">ID</label>-->
+                                          <div class="col-sm-4">
+						<input type="text" name="vehicleNum" class="form-control" id="vehicleNum" placeholder="Vehicle Number">
+					  </div>
+                                        </div>
+                                        <div class="form-group row">
+					  <label for="input-4" class="col-sm-3 col-form-label">SUPPLY LOCATION</label>
+					  
 					</div>
                                         <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">TRANSPORT IDENTIFICATION</label>
-					  <div class="col-sm-10">
-						<input type="text" name="vehicleNum" class="form-control" id="vehicleNum" placeholder="Enter Vehicle/Rail Rake Number Or Airliner/Shipliner name">
+					  <div class="col-sm-3">
+						<input type="text" name="placeOfSupp" class="form-control" id="placeOfSupp" placeholder="Supply Location">
+					  </div>
+                                          <div class="col-sm-4">
+                                            <input type="text"  name="invState" class="form-control" id="invState" placeholder="State">
+                                          </div>
+                                          <div class="col-sm-3">
+                                            <input type="text" name="invStateCode" class="form-control" id="invStateCode" placeholder="State Code">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+					  <label for="input-4" class="col-sm-4 col-form-label">CONSIGNEE details</label>
+                                        </div>
+                                        <div class="form-group row">
+					  
+					  <div class="col-sm-3">
+						<input type="text" name="consName" class="form-control" id="consName" placeholder="Consignee Name">
+					  </div>
+                                          <div class="col-sm-4">
+						<input type="text" name="consAP" class="form-control" id="consAP" placeholder="Address line 1">
+					  </div>
+                                          <div class="col-sm-3">
+						<input type="text" name="consTal" class="form-control" id="consTal" placeholder="Taluka">
+					  </div>
+                                          
+					</div>
+                                        <div class="form-group row">
+					  
+					  <div class="col-sm-3">
+						<input type="text" name="consDist" class="form-control" id="consDist" placeholder="District">
+					  </div>
+                                          <div class="col-sm-4">
+						<input type="text" name="consState" class="form-control" id="consState" placeholder="State">
+					  </div>
+                                          <div class="col-sm-3">
+						<input type="text" name="consStateCode" class="form-control" id="consStateCode" placeholder="State Code">
 					  </div>
 					</div>
                                         <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">SUPPLY DATE</label>
-					  <div class="col-sm-10">
-                                              <input style="width: fit-content;" name="suppDate" type="date" class="form-control" id="suppDate" >
-                                              <!--<input type="text" name="cgstaadhar" class="form-control" id="input-b7" placeholder="Enter Customer GSTN/AADHAR">-->
+					  
+                                          <div class="col-sm-3">
+                                              <input type="text" autocomplete="consGstnAadhar" name="consGstnAadhar" value="123456789" class="form-control" id="consGstnAadhar" placeholder="GSTN/Aadhar">
 					  </div>
+					  
 					</div>
-                                        <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">SUPPLY LOCATION</label>
-					  <div class="col-sm-10">
-						<input type="text" name="placeOfSupp" class="form-control" id="placeOfSupp" placeholder="Enter Supply Location">
-					  </div>
-					</div>
-                                        <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">CONSIGNEE NAME</label>
-					  <div class="col-sm-10">
-						<input type="text" name="consName" class="form-control" id="consName" placeholder="Enter Consignee Name">
-					  </div>
-					</div>
-                                        <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">CONSIGNEE A/P</label>
-					  <div class="col-sm-10">
-						<input type="text" name="consAP" class="form-control" id="consAP" placeholder="Enter Consignee A/P">
-					  </div>
-					</div>
-                                        <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">CONSIGNEE TALUKA</label>
-					  <div class="col-sm-10">
-						<input type="text" name="consTal" class="form-control" id="consTal" placeholder="Enter Consignee Taluka">
-					  </div>
-					</div>
-                                        <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">CONSIGNEE DISTRICT</label>
-					  <div class="col-sm-10">
-						<input type="text" name="consDist" class="form-control" id="consDist" placeholder="Enter Consignee District">
-					  </div>
-					</div>
-                                        <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">CONSIGNEE STATE</label>
-					  <div class="col-sm-10">
-						<input type="text" name="consState" class="form-control" id="consState" placeholder="Enter Consignee State">
-					  </div>
-					</div>
-                                        <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">CONSIGNEE STATE CODE</label>
-					  <div class="col-sm-10">
-						<input type="text" name="consStateCode" class="form-control" id="consStateCode" placeholder="Enter Consignee State Code">
-					  </div>
-					</div>
-                                        <div class="form-group row">
-					  <label for="input-4" class="col-sm-2 col-form-label">CONSIGNEE GSTN/AADHAR</label>
-					  <div class="col-sm-10">
-                                              <input type="text" autocomplete="consGstnAadhar" name="consGstnAadhar" value="123456789" class="form-control" id="consGstnAadhar" placeholder="Enter Consignee GSTN/Aadhar">
-					  </div>
-					</div>
+                                        
 					 <div class="form-group row">
 					  <label for="input-1" class="col-sm-2 col-form-label"></label>
 					  <div class="col-sm-10">
@@ -387,7 +370,7 @@
                                             <label for="input-10" class="col-sm-2 col-form-label">Rate(Sq. Mt.)</label>
                                             <div id="output1" >
                                             <div class="col-sm-4">
-                                                <input style="margin-bottom: 13px; margin-left: 55%" type="text" class="form-control" value="0.0" id="prate" readonly="readonly" name="rate">
+                                                <input style="width: fit-content;margin-bottom: 13px; " type="text" class="form-control" value="0.0" id="prate" readonly="readonly" name="rate">
                                             </div>
                                             </div>    
                                             <label for="input-11" class="col-sm-2 col-form-label">CGST(%)</label>
@@ -452,7 +435,7 @@
         <%@include file="Footer.jsp" %>
             <!--End footer-->
             </div>
-        </div><!--End wrapper-->
+        </div><!--End container fluid-->
                    
         <!-- Bootstrap core JavaScript-->
         <script src="assets/js/jquery.min.js"></script>
@@ -482,13 +465,9 @@
         <script>
 //            d = new Date();
 //            document.getElementById("input-b10").value(d);
- 
- 
- //invNum sac products quantity rate amt disco cgst sgst igst total
-// delete cart by ID
-            $('#document').ready(function() {
+                $('#document').ready(function() {
 //  
-            $('#cnfcartbtn').click(function() {
+//            $('#cnfcartbtn').click(function() {
 //                function del(){
 //                alert('click');
 //                $( ".cart" ).each(function( ) {
@@ -497,7 +476,8 @@
 //            }
 //                 alert('MainPage_'+username);
 //                $(".loader").show();
-                    alert("cart confirmed");
+//                    alert("cart deleted");
+                    alert("ConfirmCartAjax");
 
                 $.ajax({
                     url: "Ajax/ConfirmCartAjax.jsp",
@@ -515,8 +495,8 @@
 //                        $("#tb2").hide();
 //                        $("#form1").show();
 //                        $("#output").html(response);
-                        var url = 'Invoice.jsp';
-                        $(location).prop('href', url);
+//                        var url = 'Invoice.jsp';
+//                        $(location).prop('href', url);
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
                         console.log(textStatus, errorThrown);
@@ -526,8 +506,12 @@
 
 //    } 
 //            }
-            });
+//            });
         });
+ 
+ //invNum sac products quantity rate amt disco cgst sgst igst total
+// delete cart by ID
+            
             
             
 //            invNum pname prate quant amt disco
@@ -693,6 +677,8 @@
             function showForm(){
                document.getElementById("form1").style.display = "block";
                document.getElementById("tb2").style.display = "none";
+               var tb = $('#tb2').DataTable();
+                tb.destroy();
                $("#existing").hide();
                $("#new").hide();
            }
@@ -701,6 +687,7 @@
               //window.location="SelectCustomer.jsp";
               document.getElementById("form1").style.display = "none";
               document.getElementById("tb2").style.display = "block";
+              $('#tb2').DataTable();
               
                 
             }
@@ -816,6 +803,8 @@
 //                   alert('click');
                 var username = this.id;
 //                 alert('MainPage_'+username);
+                var tb = $('#tb2').DataTable();
+                tb.destroy();
                 $("#new").hide();
                 $("#existing").hide();
                     //alert(username);
@@ -942,6 +931,6 @@
                 document.getElementById("invDate").setAttribute("min",today1);
                 document.getElementById("suppDate").setAttribute("min",today1);
         </script>
-        
+        </div><!--End wrapper-->
     </body>
 </html>

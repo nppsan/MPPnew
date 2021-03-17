@@ -20,7 +20,7 @@ import org.hibernate.annotations.NaturalId;
  * @author npp
  */
 @Entity
-public class SalesModel {
+public class SalesModel{
     
     @Id @GeneratedValue
     private long id;
@@ -31,18 +31,28 @@ public class SalesModel {
 
     
     
-    @OneToMany(  fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+    @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
     private List<SaleProductModel> products;
-    
+    private String invDate;
+
 //    private float quantity;
 //    private float rate;
 //    private float amt;
 //    private float disco;
-    //private float taxableAmt;
+//    private float taxableAmt;
 //    private int cgst;
 //    private int sgst;
 //    private int igst;
 //    private float total;
+    public String getInvDate() {
+        return invDate;
+    }
+
+    public void setInvDate(String invDate) {
+        this.invDate = invDate;
+    }
+    
+    
 
     public long getId() {
         return id;
@@ -59,78 +69,7 @@ public class SalesModel {
     public void setInvNum(int invNum) {
         this.invNum = invNum;
     }
-//
-//    public String getSac() {
-//        return sac;
-//    }
-//
-//    public void setSac(String sac) {
-//        this.sac = sac;
-//    }
-//
-//    public float getQuantity() {
-//        return quantity;
-//    }
-//
-//    public void setQuantity(float quantity) {
-//        this.quantity = quantity;
-//    }
-//
-//    public float getRate() {
-//        return rate;
-//    }
-//
-//    public void setRate(float rate) {
-//        this.rate = rate;
-//    }
-//
-//    public float getAmt() {
-//        return amt;
-//    }
-//
-//    public void setAmt(float amt) {
-//        this.amt = amt;
-//    }
-//
-//    public float getDisco() {
-//        return disco;
-//    }
-//
-//    public void setDisco(float disco) {
-//        this.disco = disco;
-//    }
-//
-//    public int getCgst() {
-//        return cgst;
-//    }
-//
-//    public void setCgst(int cgst) {
-//        this.cgst = cgst;
-//    }
-//
-//    public int getSgst() {
-//        return sgst;
-//    }
-//
-//    public void setSgst(int sgst) {
-//        this.sgst = sgst;
-//    }
-//
-//    public int getIgst() {
-//        return igst;
-//    }
-//
-//    public void setIgst(int igst) {
-//        this.igst = igst;
-//    }
-//
-//    public float getTotal() {
-//        return total;
-//    }
-//
-//    public void setTotal(float total) {
-//        this.total = total;
-//    }
+
 
     public List<SaleProductModel> getProducts() {
         return products;
@@ -139,4 +78,12 @@ public class SalesModel {
     public void setProducts(List<SaleProductModel> products) {
         this.products = products;
     }
+
+//    public SalesModel(long id, int invNum, List<SaleProductModel> products) {
+//        this.id = id;
+//        this.invNum = invNum;
+//        this.products = products;
+//    }
+    
+    
 }

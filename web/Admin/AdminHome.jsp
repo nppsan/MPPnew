@@ -212,7 +212,7 @@
                         <div class="col-lg-12">
                             <div class="card">
 
-                                <div class="card-header"><i class="fa fa-table"></i>All Members </div>
+                                <!--<div class="card-header"><i class="fa fa-table"></i>All Members </div>-->
                                 <div class="card-body">
 
                                     <div class="table-responsive">

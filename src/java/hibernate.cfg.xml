@@ -29,5 +29,6 @@
     <mapping class="Com.Admin.Model.CartModel"/>
     <mapping class="Com.Admin.Model.SalesModel"/>
     <mapping class="Com.Admin.Model.SaleProductModel"/>
+    <mapping class="Com.Admin.Model.FeedbackModel"/>
   </session-factory>
 </hibernate-configuration>

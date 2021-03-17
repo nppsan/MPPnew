@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.newjainagroservices.com/_gallery/ResponsiveSlides.js-master/ResponsiveSlides.js-master/demo/demo.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jan 2021 06:07:45 GMT -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../responsiveslides.css" />
+  <link rel="stylesheet" href="demo.css" />
+  <script type="text/javascript" src="../../../galleriffic-2.0/galleriffic-2.0/js/jquery.min.js"></script>
+  <script type="text/javascript" src="../responsiveslides.min.js"></script>
+  <script type="text/javascript">
+//     You can also use 
+//     $(window).load(function() {
+//    $('#document').ready(function() {
+//        alert("ok");
+//      Slideshow 4
+      $(function () {
+      $("#slider4").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="callbacks_container">
+      <ul class="rslides callbacks callbacks1" id="slider4">
+        <li id="callbacks1_s0" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out 0s;">
+          <img src="images/1.jpg" alt="">
+          <!--<p class="caption">This is a caption</p>-->
+        </li>
+        <li id="callbacks1_s1" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+          <img src="images/2.jpg" alt="">
+          <!--<p class="caption">This is a caption</p>-->
+        </li>
+        <li id="callbacks1_s2" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+          <img src="images/3.jpg" alt="">
+          <!--<p class="caption">This is a caption</p>-->
+        </li>
+
+        <li id="callbacks1_s3" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+          <img src="images/4.jpg" alt="">
+          <!--<p class="caption">This is a caption</p>-->
+        </li>
+        <li id="callbacks1_s4" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+          <img src="images/5.jpg" alt="">
+          <!--<p class="caption">This is another caption</p>-->
+        </li>
+        <li id="callbacks1_s5" class="callbacks1_on" style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+          <img src="images/6.jpg" alt="">
+          <!--<p class="caption">The third caption</p>-->
+        </li>
+        <li id="callbacks1_s6" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+          <img src="images/7.jpg" alt="">
+          <!--<p class="caption">This is a caption</p>-->
+        </li>
+        <li id="callbacks1_s7" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+          <img src="images/8.jpg" alt="">
+          <!--<p class="caption">This is a caption</p>-->
+        </li>
+      </ul><a href="#" class="callbacks_nav callbacks1_nav prev">Previous</a><a href="#" class="callbacks_nav callbacks1_nav next">Next</a>
+    </div>
+<!--    <div class="callbacks_container">
+      <ul class="rslides" id="slider4">
+        <li>
+          <img src="images/1.jpg" alt="">
+          <p class="caption">This is a caption</p>
+        </li>
+        <li>
+          <img src="images/2.jpg" alt="">
+          <p class="caption">This is a caption</p>
+        </li>
+        <li>
+          <img src="images/3.jpg" alt="">
+          <p class="caption">This is a caption</p>
+        </li>
+
+        <li>
+          <img src="images/4.jpg" alt="">
+          <p class="caption">This is a caption</p>
+        </li>
+        <li>
+          <img src="images/5.jpg" alt="">
+          <p class="caption">This is another caption</p>
+        </li>
+        <li>
+          <img src="images/6.jpg" alt="">
+          <p class="caption">The third caption</p>
+        </li>
+        <li>
+          <img src="images/7.jpg" alt="">
+          <p class="caption">This is a caption</p>
+        </li>
+        <li>
+          <img src="images/8.jpg" alt="">
+          <p class="caption">This is a caption</p>
+        </li>
+      </ul>
+    </div>-->
+ </div>
+</body>
+
+<!-- Mirrored from www.newjainagroservices.com/_gallery/ResponsiveSlides.js-master/ResponsiveSlides.js-master/demo/demo.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jan 2021 06:08:15 GMT -->
+</html>

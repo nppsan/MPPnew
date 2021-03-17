@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    
+<!-- Mirrored from www.newjainagroservices.com/_gallery/_gal.demo2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jan 2021 06:08:22 GMT -->
+<head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>CSS3 Lightbox</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="CSS3 Lightbox - A CSS-only lightbox" />
+        <meta name="keywords" content="css3, lightbox, overlay, effect, images, thumbnails" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.html"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+        
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#close").click(function () {
+                $('iframe'[0].contentWindow.postMessage(JSON.stringfy({
+                "event" : "command",
+                "func" : "stopVideo"
+            }),"https://www.youtube.com/");
+
+            });
+        });
+
+    </script>
+
+    </head>
+    <body id="page">
+        <div class="container">
+			<!-- Codrops top bar -->
+            <!--<div class="codrops-top">
+                <a href="http://tympanus.net/Tutorials/SlopyElements/">
+                    <strong>&laquo; Previous Demo: </strong>Slopy Elements with CSS3
+                </a>
+                <span class="right">
+					<a href="http://www.behance.net/gallery/w-h-i-t-e/269865" target="_blank">Images by Joanna Kustra</a>
+					<a href="http://creativecommons.org/licenses/by-nc/3.0/" target="_blank">CC BY-NC 3.0</a>
+                    <a href="http://tympanus.net/codrops/2011/12/26/css3-lightbox/">
+                        <strong>Back to the Codrops Article</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div>--><!--/ Codrops top bar -->
+			<header>
+				<!--<h1>CSS3 <span>Lightbox</span></h1>
+				<h2>A simple CSS-only lightbox experiment</h2>-->
+				<!--<p class="codrops-demos">
+					<a class="current-demo" href="index.html">Demo 1</a>
+					<a href="index2.html">Demo 2</a>
+					<a href="index3.html">Demo 3</a>
+				</p>-->
+			</header>
+			<section>
+				<ul class="lb-album">
+					<li>
+						<a href="#image-1">
+							<iframe width="280" height="180"  src="https://www.youtube.com/embed/18DX4c2S29U" frameborder="0"></iframe>
+							<span>सुशीलकुमार शामकुमार मंत्री यांची मुलाखत</span>
+						</a>
+						<div class="lb-overlay" id="image-1">
+							<a href="#page" class="lb-close">बंद करा</a>
+							<iframe width="680" height="380" id="frm" src="https://www.youtube.com/embed/18DX4c2S29U" frameborder="0"></iframe>
+							<div>
+								<h3>मुलाखत </h3>
+								<p>सुशीलकुमार शामकुमार मंत्री यांची मुलाखत</p>
+							</div>
+							
+						</div>
+					</li>
+					<li>
+						<a href="#image-2">
+                        <iframe width="280" height="180" src="https://www.youtube.com/embed/5my9BpfUt1I" frameborder="0"></iframe>
+							<span>संतोष गायकवाड यांची मुलाखत</span>
+						</a>
+						<div class="lb-overlay" id="image-2">
+							<iframe width="680" height="380" src="https://www.youtube.com/embed/5my9BpfUt1I" frameborder="0" ></iframe>
+							<div>							
+								<h3>मुलाखत</h3>
+								<p>संतोष गायकवाड यांची मुलाखत</p>
+							</div>
+							<a href="#page" class="lb-close">बंद करा</a>
+						</div>
+					</li>
+					<li>
+						<a href="#image-3">
+							<iframe width="280" id="frm3" height="180" src="https://www.youtube.com/embed/TAyBCZmJsgk?wmode=transparent&amp;version=3&amp;enablejsapi=1" frameborder="0" ></iframe>
+							<span>नामदेव कर्जुले</span>
+						</a>
+						<div class="lb-overlay" id="image-3">
+							<iframe width="680" height="380" src="https://www.youtube.com/embed/TAyBCZmJsgk" frameborder="0" ></iframe>
+							<div>							
+								<h3>मुलाखत</h3>
+								<p>नामदेव कर्जुले यांची मुलाखत</p>
+							</div>
+							<a href="#page" id="close" class="lb-close">बंद करा</a>
+						</div>
+					</li>
+					<li>
+						<a href="#image-4">
+							<iframe width="280" height="180" src="https://www.youtube.com/embed/DCee7xphGh4" frameborder="0" allowfullscreen></iframe>
+							<span>राजेंद्र जाधव</span>
+						</a>
+						<div class="lb-overlay" id="image-4">
+							<iframe width="680" height="380" src="https://www.youtube.com/embed/DCee7xphGh4" frameborder="0" allowfullscreen></iframe>
+							<div>							
+								<h3>मुलाखत</h3>
+								<p>राजेंद्र जाधव यांची मुलाखत</p>
+							</div>
+							<a href="#page" class="lb-close">बंद करा</a>
+						</div>
+					</li>
+					<li>
+						<a href="#image-5">
+							<iframe width="280" height="180" src="https://www.youtube.com/embed/vuyYRaAZwtY" frameborder="0" allowfullscreen></iframe>
+							<span>सांदीप काळे</span>
+						</a>
+						<div class="lb-overlay" id="image-5">
+							<iframe width="680" height="380" src="https://www.youtube.com/embed/vuyYRaAZwtY" frameborder="0" allowfullscreen></iframe>
+							<div>							
+								<h3>मुलाखत </h3>
+								<p>संदीप काळे यांची मुलाखत</p>
+							</div>
+							<a href="#page" class="lb-close">बंद करा</a>
+						</div>
+					</li>
+                    <li>
+						<a href="#image-6">
+							<iframe width="280" height="180" src="https://www.youtube.com/embed/7G2jUE7o0Xg" frameborder="0" allowfullscreen></iframe>
+							<span>Verma Sir</span>
+						</a>
+						<div class="lb-overlay" id="image-6">
+							<iframe width="680" height="380" src="https://www.youtube.com/embed/7G2jUE7o0Xg" frameborder="0" allowfullscreen></iframe>
+							<div>							
+								<h3>मुलाखत </h3>
+								<p>Verma Sir यांची मुलाखत</p>
+							</div>
+							<a href="#page" class="lb-close">बंद करा</a>
+						</div>
+					</li>
+					
+				</ul>
+			</section>
+        </div>
+    </body>
+
+<!-- Mirrored from www.newjainagroservices.com/_gallery/_gal.demo2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jan 2021 06:08:23 GMT -->
+</html>

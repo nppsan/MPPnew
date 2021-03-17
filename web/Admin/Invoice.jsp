@@ -47,10 +47,8 @@
         function printDiv() { 
             var divContents = document.getElementById("panel").innerHTML; 
             var a = window.open('', '', 'height=1200, width=800'); 
-//            a.document.write('<html>'); 
-//            a.document.write('<body > <h1>Div contents are <br>'); 
+
             a.document.write(divContents); 
-//            a.document.write('</body></html>'); 
             a.document.close(); 
             a.print(); 
         } 
@@ -247,14 +245,14 @@
                 
                 <!--products start-->
 <%        
-                List<SaleProductModel> sp = new SaleProductDao().getAll();
+                List<CartModel> sp = new CartDao().getAll();
                 int i=0;
                 float gTotal = 0.00f;
                 float total = 0.00f;
                 float tCgst = 0.00f;
                 
                 
-                for(SaleProductModel p:sp)
+                for(CartModel p:sp)
                 {
                     i++;
                     float beforeTaxAmtPerProduct = p.getPrate() * p.getQuant();
@@ -262,8 +260,9 @@
                     float amtOfGST =  (taxableAmtAfterDisco * 9/100);
                         DecimalFormat df = new DecimalFormat();
                         df.setMaximumFractionDigits(1);
-                    
-//                        System.out.println(df.format(amtOfGST));
+                    float formatamtOfGST = Float.parseFloat(df.format(amtOfGST));    
+                        System.out.println("df format"+df.format(amtOfGST));
+                        System.out.println("df format"+formatamtOfGST); 
 //                        System.out.printf("%.2f", amtOfGST);
                     float totalAmtAfterTaxes = taxableAmtAfterDisco + amtOfGST*2;
                     total = total + taxableAmtAfterDisco;
@@ -414,7 +413,7 @@ If you have any query concerning this invoice, contact us with above details.
                     <script src="assets/js/popper.min.js"></script>
                     <script src="assets/js/bootstrap.min.js"></script>
                   <script>
-                      
+
                 
                     $('#document').ready(function() {
                         var i = document.getElementById("conv").innerHTML;
@@ -428,9 +427,6 @@ If you have any query concerning this invoice, contact us with above details.
 
                 today = dd + '/' + mm + '/' + yyyy;
                 document.getElementById("date").innerHTML= today;
-//                document.getElementById('number').onkeyup = function () {
-//                document.getElementById('words').innerHTML = inWords(document.getElementById('number').value);
-//                };
                   </script>
 </body>
 </html>

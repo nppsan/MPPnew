@@ -40,7 +40,7 @@ public class AddCustDetailsServlet extends HttpServlet {
             
             
            String mobile=request.getParameter("cmobile"); 
-           int invNum= Integer.parseInt(request.getParameter("innumber")); 
+           //int invNum= Integer.parseInt(request.getParameter("innumber")); 
            String email=request.getParameter("cemail");
            String custName=request.getParameter("cname");
            String addrAP=request.getParameter("cap");
@@ -52,7 +52,7 @@ public class AddCustDetailsServlet extends HttpServlet {
            
             
             System.out.println("/AddCustDetailsServelet");
-            System.out.println("Invoice Numb" + invNum);
+            //System.out.println("Invoice Numb" + invNum);
             System.out.println("Customer Name "+ custName );
            
             CustDetailsModel p = new CustDetailsModel();
@@ -64,7 +64,7 @@ public class AddCustDetailsServlet extends HttpServlet {
             p.setCustName(custName);
             p.setEmail(email);
             p.setGstnAadhar(gstnAadhar);
-            p.setInvNum(invNum);
+           // p.setInvNum(invNum);
             p.setMobile(mobile);
             p.setStateCode(stateCode);
             

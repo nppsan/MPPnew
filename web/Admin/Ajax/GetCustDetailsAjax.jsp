@@ -14,77 +14,60 @@
     
 
 %>
+ 
+
+
 
 
 <div class="card">
     <div class="card-body">
-       <div class="card-title">CUSTOMER DETAILS</div>
-       <hr>
-				    <!--<form>
-            //  innumber        
-                                    -->
-	<div class="form-group row">
-	  <label for="input-4" class="col-sm-2 col-form-label">Name</label>
-	  <div class="col-sm-10">
-        	<input name="cname" type="text" value="<%=cm.getCustName()%>" class="form-control" id="cname" placeholder="Enter Customer Name">
-	  </div>
-	</div>
-	<div class="form-group row">
-	  <label for="input-5" class="col-sm-2 col-form-label">Email</label>
-	  <div class="col-sm-10">
-              <input name="cemail" type="text" value="<%=cm.getEmail()%>" class="form-control" id="cemail" placeholder="Enter Customer Email Address">
-	  </div>
-	</div>
-	<div class="form-group row">
-	  <label for="input-6" class="col-sm-2 col-form-label">Mobile</label>
-	  <div class="col-sm-10">
-		<input type="text" name="cmobile" value="<%=cm.getMobile()%>" class="form-control" id="cmobile" placeholder="Enter Mobile Number">
-	  </div>
-	</div>
-	<div class="form-group row">
-	  <label for="input-4" class="col-sm-2 col-form-label">Customer's A/P</label>
-	  <div class="col-sm-10">
-            <input type="text" name="cap" value="<%=cm.getAddrAP()%>" class="form-control" id="cap" placeholder="Enter Customer At Post">
-	  </div>
-	</div>
-        <div class="form-group row">
-	  <label for="input-4" class="col-sm-2 col-form-label">Customer's Taluka</label>
-	  <div class="col-sm-10">
-		<input type="text" name="ctal" value="<%=cm.getAddrTal()%>" class="form-control" id="ctal" placeholder="Enter Customer Taluka">
-	  </div>
-	</div>
-        <div class="form-group row">
-	  <label for="input-4" class="col-sm-2 col-form-label">Customer's District</label>
-	  <div class="col-sm-10">
-		<input type="text" name="cdist" value="<%=cm.getAddrDist()%>" class="form-control" id="cdist" placeholder="Enter Customer District">
-	  </div>
-	</div>
-        <div class="form-group row">
-	  <label for="input-4" class="col-sm-2 col-form-label">Customer's GSTN/AADHAR Number</label>
-	  <div class="col-sm-10">
-		<input type="text" name="cgstaadhar" value="<%=cm.getGstnAadhar()%>" class="form-control" id="cgstaadhar" placeholder="Enter Customer GSTN/AADHAR">
-	  </div>
-	</div>
-        <div class="form-group row">
-	  <label for="input-4" class="col-sm-2 col-form-label">State</label>
-	  <div class="col-sm-10">
-		<input type="text" name="cstate" value="<%=cm.getAddrState()%>" class="form-control" id="cstate" placeholder="Enter Customer State">
-	  </div>
-	</div>
-        <div class="form-group row">
-	  <label for="input-4" class="col-sm-2 col-form-label">State Code</label>
-	  <div class="col-sm-10">
-		<input type="text" name="cstcode" value="<%=cm.getStateCode()%>" class="form-control" id="cstcode" placeholder="Enter Customer State Code">
-	  </div>
-	</div>
-<!--	<div class="form-group row">
-	  <label for="input-1" class="col-sm-2 col-form-label"></label>
-	  <div class="col-sm-10">
-		<button type="button" id="btn1" onclick="showhowForm2()" class="btn btn1 btn-primary shadow-primary px-5"><i class="icon-lock"></i> SAVE & NEXT</button>
-	  </div>
-	</div>-->
-	<!--</form>-->
-	</div>
+        <div class="card-title">CUSTOMER DETAILS</div>
+	    <hr>
+            <div class="form-group row">
+                <label  class="col-sm-6 col-form-label">Personal Details</label>
+            </div>
+	    <div class="form-group row">
+                <div class="col-sm-3">
+                    <input name="cname" value="<%=cm.getCustName()%>" type="text" class="form-control" id="cname" placeholder="Name">
+		</div>
+                <div class="col-sm-3">
+                    <input name="cemail" value="<%=cm.getEmail()%>" type="text" class="form-control" id="cemail" placeholder="Email">
+		</div>
+                <div class="col-sm-3">
+                    <input type="text" value="<%=cm.getMobile()%>" name="cmobile" class="form-control" id="cmobile" placeholder="Mobile">
+		</div>
+            </div>
+            <div class="form-group row">
+                <label  class="col-sm-6 col-form-label">Address Details</label>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-3">
+                    <input type="text" name="cap" value="<%=cm.getAddrAP()%>" class="form-control" id="cap" placeholder="Address Line 1">
+		</div>
+                <div class="col-sm-3">
+                    <input type="text" name="ctal" value="<%=cm.getAddrTal()%>" class="form-control" id="ctal" placeholder="Taluka">
+		</div>
+                <div class="col-sm-3">
+                    <input type="text" name="cdist" value="<%=cm.getAddrDist()%>" class="form-control" id="cdist" placeholder="District">
+		</div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-3">
+                    <input type="text" name="cstate" value="<%=cm.getAddrState()%>" class="form-control" id="cstate" placeholder="State">
+		</div>
+                <div class="col-sm-3">
+                    <input type="text" name="cstcode" value="<%=cm.getStateCode()%>" class="form-control" id="cstcode" placeholder="State Code">
+		</div>
+            </div>
+            <div class="form-group row">
+                <label  class="col-sm-6 col-form-label">Identification Details</label>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-3">
+                    <input type="text" name="cgstaadhar" value="<%=cm.getGstnAadhar()%>" class="form-control" id="cgstaadhar" placeholder="GSTN/AADHAR">
+		</div>
+            </div>
+    </div>
 </div>
           <script>
 //              $('#document').ready(function() {

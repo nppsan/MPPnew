@@ -105,10 +105,9 @@ public class SaleProductModel {
     public SalesModel getSalesmodel() {
         return salesmodel;
     }
-
+    
     public void setSalesmodel(SalesModel salesmodel) {
         this.salesmodel = salesmodel;
     }
-
     
 }

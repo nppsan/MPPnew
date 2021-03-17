@@ -1,7 +1,8 @@
 
+<%@page import="Com.Admin.Dao.ProductDao"%>
 <%@page import="Com.Admin.Dao.AdminDao"%>
-<%@page import="Com.Admin.Model.AdminModel"%>
 <%@page import="java.util.List"%>
+<%@page import="Com.Admin.Model.AdminModel"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,8 +35,7 @@
 
             <div class="content-wrapper">
 
-                <%     
-                        if (session.getAttribute("i") != null) {
+                <%      if (session.getAttribute("i") != null) {
                         int i = (Integer) session.getAttribute("i");
                         String msg = (String) session.getAttribute("msg");
                         if (i == 2) {
@@ -100,46 +100,92 @@
                                         <div id="tabe-13" class="container tab-pane active">
                                             <%                                              //  MemberModel g = new MemberDao().getById(sidebarr.getId());
                                             %>
-                                            <form id="form_validation" action="../UpdateProfileDetailsServlet"  method="POST">
+                                            
+                                            
+                                          
+        <form id="form_validation" action="../ProfileUpdateServlet"  method="POST">
                                                 <!--<form id="form_validation" action="../../../FirstId" method="post">-->
 
-                                                <input type="hidden" name="UserID" value="">
+                <div class="row">
+                    <%
+                    AdminModel u = new AdminDao().getById(1);
+                    
+                    %>
+                    <div class="col-lg-6">
+                        <input type="hidden" id="cid" name="id" value="<%=u.getId() %>">
+                       <label for="personName" class="form-label">Name</label>
+                       <input type="text" autocomplete="off" value="<%=u.getName() %>" required="" class="form-control"  name="name">
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+
+                                                        <label for="designation" class="form-label">Email </label>
+                                                        <input type="text" autocomplete="off" value="<%=u.getEmail() %>" required="" class="form-control" id="designation" name="email">
+                                                    </div>
+
+                                                </div>
                                                 <div class="row">
                                                     <div class="col-lg-6">
-             <label for="personName" class="form-label">Name</label>
-             <select class="form-control" id="select1" style="width: 100%; " name="Category"   required="required">
-                            <option> </option>
-                <%
+                                                        <label for="personName" class="form-label">Mobile</label>
+                                                        <input type="text" autocomplete="off" required="" value="<%=u.getMobile() %>" class="form-control" name="mobile" >
+                                                    </div>
 
-                    List<AdminModel> s = new AdminDao().getAll();
-                  //  AdminDao ad = new AdminDao();
-                  //  AdminModel am = new AdminModel();
-                    for (AdminModel p : s) 
-                    {
-                 
-                %>
+<!--                                                    <div class="col-lg-6">
+                                                        <label for="personName" class="form-label">Occupation</label>
+                                                        <input type="text" autocomplete="off" required="" value="" class="form-control onlytext" name="Occupation" >
+                                                    </div>-->
 
-                <option   name="<%=p.getName()%>" value="<%=p.getId()%>"><%=p.getName()%></option>
-                <%
-                    }   
-                %>              
-                </select> 
-                                                        <!--<input type="text"  autocomplete="off" required="" value="" class="form-control onlytext" name="personName" >-->
-                   </div>
-                <div class="col-lg-6">
-                  <label for="designation"  class="form-label">Email </label>
-                    <input id="email" type="text" autocomplete="off" value="" required="" class="form-control"  name="Email">
-                    <input type="hidden" id="ctype" name="type" value="3487">
-                    <input type="hidden" id="cid" name="type" value="3487">
-                </div>
+<!--                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <label for="Age" class="form-label">Age</label>
+                                                        <input type="number" autocomplete="off" required="" value="" class="form-control" name="Age" > 
+                                                    </div>-->
 
-                </div>
-                <div class="row">
-                 <div class="col-lg-6">
-                  <label for="personName" class="form-label">Mobile</label>
-                   <input type="text" id="mobile" autocomplete="off" required="" value="" class="form-control" name="Mobile" >
-                 </div>
-                </div>
+                                                    <div class="col-lg-6">
+
+
+
+<!--                                                        <label for="Age" class="form-label">Gender</label>
+                                                        <select class="form-control" name="Gender" id="basic-select">
+                                                            <option value=""></option>
+                                                            <option value="Male">Male</option>
+                                                            <option value="Female">Female</option>
+
+                                                        </select>-->
+
+
+
+                                                    </div>
+
+<!--                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <label for="personName" class="form-label">Pan Number</label>
+                                                        <input type="text" autocomplete="off" required="" value="" class="form-control" name="PanNum" >
+                                                    </div>-->
+
+<!--                                                    <div class="col-lg-6">
+                                                        <label for="personName" class="form-label">Aadhaar Number</label>
+                                                        <input type="text" autocomplete="off" required="" value="" class="form-control" name="AadhaarNum" >
+                                                    </div>-->
+
+                                                </div>
+
+                                                <div class="row">
+<!--                                                    <div class="col-lg-6">
+                                                       <label for="personName" class="form-label">Member Of charch</label>
+                                                        <input type="text" autocomplete="off" required="" value="" class="form-control onlytext" name="MemCharch" >
+                                     
+                                                    </div>-->
+<!--                                                    <div class="col-lg-6">
+                                                        <label for="personName" class="form-label">City</label>
+                                                        <input type="text" autocomplete="off" required="" value="" class="form-control onlytext" name="City" >
+                                                    </div>-->
+
+
+
+                                                </div>
 
 
                                                
@@ -147,104 +193,29 @@
 
 
 
-            <div class="form-group row float-right">
+                                                <div class="form-group row float-right">
                                                     <!--                                                    <label for="input-1" class="col-sm-4 col-form-label"></label>-->
-             <div class="col-sm-12 ">
-              <button class="btn btn-gradient-scooter waves-effect waves-light m-1" type="submit">Update</button>
-             </div>
-            </div>
+                                                    <div class="col-sm-12 ">
+                                                        <button class="btn btn-gradient-scooter waves-effect waves-light m-1" type="submit">Update</button>
+                                                    </div>
+                                                </div>
                                                 <!--                                <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>-->
-            </form>
-<!--                <script type = "text/javascript">
-//                    $("#select1").on('change', function () {
-//                                alert('Change Happened');
-//                                var catid = $(this).find('option:selected').attr('value');
-//                                var type = $(this).find('option:selected').attr('name');
-//                                document.getElementById('ctype').setAttribute("value",type) ;
-//                                document.getElementById('cid').setAttribute("value",catid) ;
-//                                var option = $('option:selected', this).attr('value');
-//                                
-//                                catid = $("select1").find('option:selected').attr('value');
-//                                type = $("select1").find('option:selected').attr('name');
-//                                console.log(catid);
-//                                console.log(type);
-//                                
-//                                alert(option);
-//                                alert(catid);
-//                                console.log(catid);
-//                                alert(type);
-//                                });
-//                            ProductDao pd=new ProductDao();
-                   
-                   
-//                            ProductModel pm = pd.getById(Long.parseLong(id));
-                   
-                                document.getElementsByTagName('select')[0].onchange = function() {
-                                 var index = this.selectedIndex;
-                                 var inputText = this.children[index].innerHTML.trim();
-                                    console.log(inputText);
-                                    var id = $(this).find('option:selected').attr('value');
-                                    var name = $(this).find('option:selected').attr('name');
-                                    document.getElementById('ctype').setAttribute("value", name) ;
-                                    document.getElementById('cid').setAttribute("value", id) ;
-                                    alert(id);
-                                    alert(name);
-                                    
-                                    
-                                    var mysql = require('mysql');
-                                    var conn = mysql.createConnection({
-                                          host: "localhost",
-                                          user: "root",
-                                          password: "root",
-                                          database: "loanmlm"
-                                    });
-                                    conn.connect((err)=>{
-                                    if (err) throw err;
-  
-                                    conn.query("SELECT * FROM adminmodel", (err, result, fields)=>{
-                                        if (err) throw err;
-                                            console.log(result);
-                                                 });
-                                         });
-                                    
-                                    var adminDaoObj= new Packages.Com.Admin.Dao.AdminDao();
-                                    var adminModelObj = new Packages.Com.Admin.Model.AdminModel();
-                                    adminModelObj = adminDaoObj.getById(Long.parseLong(id));
-                                    document.getElementById('email').setAttribute("value", adminModelObj.getEmail());
-                                    document.getElementById('mobile').setAttribute("value", adminModelObj.getMobile());
-                                    alert(adminModelObj.getEmail());
-                                    console.log(adminModelObj.getEmail());
-                                };
-//                           $(document.body).on('change','#select1',function(){
-//                                // alert('Change Happened');
-//                                 catid = $(this).find('option:selected').attr('value');
-//                                type = $(this).find('option:selected').attr('name');
-//                                document.getElementById('ctype').setAttribute("value",type) ;
-//                                document.getElementById('cid').setAttribute("value",catid) ;
-//                                alert($(this).find('option:selected').attr('value'));
-//                                
-//                                alert(type);
-//                             });
-                             
-                </script>       -->
-           </div>
-
-                                     
+        </form>
+                                        
+                                       </div>
 
 
+                
                                         <div id="tabe-15" class="container tab-pane fade">
-                                            <form id="form_validation" action="../ChangePassword1"  method="POST">
-                                                <input type="hidden" name="UserID" value="">
+                                            <form id="form_validation" action="../ChangePassword"  method="POST">
+                                                <input type="hidden" id="id"  name="id" value="<%=u.getId()%>">
                                                 <!--<form id="form_validation" action="../../../FirstId" method="post">-->
 
                                                 <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <label for="personName" class="form-label">UserName</label>
-                                                        <input type="text" autocomplete="off" required="" value="" placeholder="Reset" class="form-control" name="UserName">
-                                                    </div>
+                                                    
                                                     <div class="col-lg-6">
                                                         <label for="personName" class="form-label">Reset Password</label>
-                                                        <input type="text" autocomplete="off" required="" value="" placeholder="Reset" class="form-control" name="Password">
+                                                        <input type="text" autocomplete="off" required="" value="<%=u.getPwd()%>" placeholder="Reset" class="form-control" name="pwd">
                                                     </div>
 
                                                     <!--                                                    <div class="col-lg-6">
@@ -265,8 +236,9 @@
 
 
                                             </form>
+                                       
                                         </div>
-
+                
                                     </div>
                                 </div>
                             </div>
@@ -289,7 +261,7 @@
 
         </div><!--End wrapper-->
 
-<!--       <script>
+       <script>
             $(".onlytext").on("keyup", function() {
                 var valid = /^[a-zA-Z\s-, ]+$/.test(this.value),
                         val = this.value;
@@ -302,7 +274,31 @@
                 }
             });
 
-        </script>-->
+        </script>
+            <script>
+                    
+                            // var catid;
+                            // var type;
+                            $("#select1").on('change', function () {
+                                //alert($(this).val());
+                                // alert($(this).find('option:selected').attr('value'));
+                                // alert($(this).find('option:selected').attr('name'));
+                                catid = $(this).find('option:selected').attr('value');
+                                type = $(this).find('option:selected').attr('name');
+                                document.getElementById('ctype').setAttribute("value",type) ;
+                                document.getElementById('cid').setAttribute("value",catid) ;
+                                document.getElementById('id').setAttribute("value",catid) ;
+                                alert(catid);
+                                alert(type);
+                                cookievalue = escape(type) + ";";
+                                document.cookie = "cname=" + cookievalue;
+                                cookievalue = escape(catid) + ";";
+                                document.cookie = "cid=" + cookievalue;
+                    
+                                });
+                               
+                                
+                 </script>
         <!-- Bootstrap core JavaScript-->
         <%@include file="Script.jsp" %>
     </body>
