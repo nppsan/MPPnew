@@ -79,8 +79,7 @@
                     
                     <td><%=p.getCustName()%></td>
                     
-                    <td> <a class="getc" id="<%=p.getId()%>" ><button  class="btn btn-success btn-sm waves-effect waves-light m-1">
-                                Select</button></a></td>
+                    <td> <a class="getc" id="<%=p.getId()%>"><button  class="btn btn-success btn-sm waves-effect waves-light m-1">Select</button></a></td>
                     
                    
 
@@ -163,7 +162,7 @@
 			<div class="form-group row">
                             <!--<label for="input-1" class="col-sm-2 col-form-label"></label>-->
                               <div class="col-sm-10">
-				<button type="submit" id="btn1" onclick="showForm2()" class="btn btn-primary shadow-primary px-5"><i class="icon-lock"></i> SAVE & NEXT</button>
+				<button type="submit" id="btn1" onclick="showForm2()" class="btn btn-primary shadow-primary px-5"><i class="icon-lock"></i> SAVE</button>
                               </div>
 			</div>
 					<!--</form>-->
@@ -206,9 +205,9 @@
         <script>
             function showForm(){
                document.getElementById("form1").style.display = "block";
-               //document.getElementById("tb2").style.display = "none";
-               //var tb = $('#tb2').DataTable();
-               // tb.destroy();
+               document.getElementById("tb2").style.display = "none";
+               var tb = $('#tb2').DataTable();
+               tb.destroy();
               // document.getElementById("new").style.display = "none"; 
                $("#existing").hide();
                $("#new").hide();

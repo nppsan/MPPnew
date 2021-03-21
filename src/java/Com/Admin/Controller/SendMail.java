@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.project.controller;
+package Com.Admin.Controller;
 
 import java.util.Properties;
 import javax.mail.Message;
