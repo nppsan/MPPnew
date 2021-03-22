@@ -84,17 +84,21 @@
             
             
                 <!--<h3 style="text-align: center; color: #2c527d">ADD CUSTOMER DETAILS</h3>-->
-                <div style="margin-left: 35%" >
+<!--                <div style="margin-left: 35%" >
                     <button id="existing" onclick="showTb()" type="button" class="btn btn-primary waves-effect waves-light m-1">Existing Customer</button>
                 
                     <button id="new" onclick="showForm()" type="button" class="btn btn-success waves-effect waves-light m-1"> New Customer </button>
-                </div>
+                </div>-->
                     
             <div class="container-fluid">
                 <div class="container">
-                
+                    <div style="float:right; display:inline"  id="sel_cust" class="col-sm-9">
+                    <div class="card">
+			     <div class="card-body">
+                                 
+				   <div class="card-title">SELECT CLIENT</div>
                 <div id="div-tb">
-                    <table id="tb2" class ='table table-striped' style='display: none; margin: auto; padding: 5px 5px 5px 5px; width:30%; text-align: center; '>
+                    <table id="tb2" class ='table table-striped' style='display: block; margin: auto; padding: 5px 5px 5px 5px; width:30%; text-align: center; '>
                 
                         <thead>
                         <th> Customer Name <i class="fa fa-table" aria-hidden="false"></i></th>
@@ -129,11 +133,14 @@
                 </tbody>
                     </table> 
                     </div>
+                                </div>
+                             </div>
+                    </div>
                
                   <form style="display: none;" id="form1" action="../AddCustDetailsServlet" method="POST"> 
                 
                     <div style="float:right; display:inline"  class="col-sm-9">
-                        <input style="width:100px; float:right" name="innumber" value="<%=inv%>" type="text" id="innumber" readonly="readonly" class="form-control">
+                        <input style="width:100px; float:right" name="innumber" value="<%=inv%>" type="hidden" id="innumber" readonly="readonly" class="form-control">
                         <!--<label style="float:right" for="readonly-input" class="col-sm-3 col-form-label">Invoice Number</label>-->
 			<div id="output">
                         <div class="card">
@@ -211,7 +218,7 @@
                         
                     <form style="display: none;" id="form2" > 
                     <div style="float:right; display:inline" class="col-sm-9">
-                        <input style="width:100px; float:right" name="innumber" value="<%=inv%>" type="text" id="invNum" readonly="readonly" class="form-control">
+                        <input style="width:100px; float:right" name="innumber" value="<%=inv%>" type="hidden" id="invNum" readonly="readonly" class="form-control">
                         <!--<label style="float:right" for="readonly-input" class="col-sm-3 col-form-label">Invoice Number</label>-->
 			
                         <div class="card">
@@ -245,6 +252,9 @@
                                                     <option value="YES">YES</option>
                                                     
                                                 </select>
+                                            </div>
+                                            <div class="col-sm-2" id="outcid">
+                                                
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -692,48 +702,61 @@
                 
             }
             function showForm2(){
-                    alert('click');
-                    var innumber = document.getElementById("innumber").value;
-                    var cname = document.getElementById("cname").value;
-                    var cmobile = document.getElementById("cmobile").value;
-                    var cemail = document.getElementById("cemail").value;
-                    var cap = document.getElementById("cap").value;
-                    var ctal = document.getElementById("ctal").value;
-                    var cdist = document.getElementById("cdist").value;
-                    var cgstaadhar = document.getElementById("cgstaadhar").value;
-                    var cstate = document.getElementById("cstate").value;
-                    var cstcode = document.getElementById("cstcode").value;
-//                  alert('MainPage_'+username);
-//                  $(".loader").show();
-                    alert(innumber);
-
-                    $.ajax({
-                        url: "Ajax/AddCustDetailsAjax.jsp",
-                        type: "post",
-                        data: {innumber: innumber, cname: cname, cmobile: cmobile, cemail: cemail, cap: cap, ctal: ctal, cdist: cdist, cgstaadhar: cgstaadhar, cstate: cstate, cstcode: cstcode },
-                        complete: function(jqXHR, textStatus) {
-
-                        },
-//                    $(document).ajaxStart(function() {
-//                        alert("Start");
-//                    });
-                        success: function(response) {
-//                        alert('hi112')
-//                        $(".loader").hide();
+//                    alert('click');
+//                    var innumber = document.getElementById("innumber").value;
+//                    var cname = document.getElementById("cname").value;
+//                    var cmobile = document.getElementById("cmobile").value;
+//                    var cemail = document.getElementById("cemail").value;
+//                    var cap = document.getElementById("cap").value;
+//                    var ctal = document.getElementById("ctal").value;
+//                    var cdist = document.getElementById("cdist").value;
+//                    var cgstaadhar = document.getElementById("cgstaadhar").value;
+//                    var cstate = document.getElementById("cstate").value;
+//                    var cstcode = document.getElementById("cstcode").value;
+////                  alert('MainPage_'+username);
+////                  $(".loader").show();
+//                    alert(innumber);
+//                    $("#form1").hide();
+//                    $("#form2").show();
+//                    $.ajax({
+//                        url: "Ajax/AddCustDetailsAjax.jsp",
+//                        type: "post",
+//                        data: {innumber: innumber, cname: cname, cmobile: cmobile, cemail: cemail, cap: cap, ctal: ctal, cdist: cdist, cgstaadhar: cgstaadhar, cstate: cstate, cstcode: cstcode },
+//                        complete: function(jqXHR, textStatus) {
+//
+//                        },
+////                    $(document).ajaxStart(function() {
+////                        alert("Start");
+////                    });
+//                        success: function(response) {
+////                        alert('hi112')
+////                        $(".loader").hide();
                             $("#form1").hide();
-                            $("#form2").show();
-                            
-                        //$("#output").html(response);
-                        },
-                        error: function(jqXHR, textStatus, errorThrown) {
-                            console.log(textStatus, errorThrown);
-                            alert("Something Went Wrong...!!!");
-                        }
-                    });
+                            $("#form2").show(); 
+                            var container = document.getElementById("outcid");
+                            var cid = document.getElementById("cid").value;
+                            alert(cid);
+                            while (container.hasChildNodes()) 
+                            {
+                                container.removeChild(container.lastChild);
+                            }
+                            var input = document.createElement("input");
+                            input.type = "hidden";
+                            input.name = "cid1";
+                            input.value = cid;
+                            container.appendChild(input);
+//                            
+//                        //$("#output").html(response);
+//                        },
+//                        error: function(jqXHR, textStatus, errorThrown) {
+//                            console.log(textStatus, errorThrown);
+//                            alert("Something Went Wrong...!!!");
+//                        }
+//                    });
 
                 
-                document.getElementById("form1").style.display = "none"; 
-                document.getElementById("form2").style.display = "block";
+//                document.getElementById("form1").style.display = "none"; 
+//                document.getElementById("form2").style.display = "block";
                
                             
                         }
@@ -823,6 +846,7 @@
 //                        alert('hi112')
 //                        $(".loader").hide();
                         $("#tb2").hide();
+                        $("#sel_cust").hide();
                         $("#form1").show();
                         $("#output").html(response);
                     },

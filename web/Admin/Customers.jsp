@@ -96,20 +96,20 @@
                     <form style="display: none;" id="form1" action="../AddCustDetailsServlet" method="POST"> 
                 
                     <div style="float:right; display:inline"  class="col-sm-9">
-                        <!--<input style="width:100px; float:right" name="innumber" value="<%//=inv%>" type="text" id="innumber" readonly="readonly" class="form-control">-->
-                        <!--<label style="float:right" for="readonly-input" class="col-sm-3 col-form-label">Invoice Number</label>-->
+                        <input style="width:100px; float:right" name="innumber" value="<%//=inv%>" type="text" id="innumber" readonly="readonly" class="form-control">
+                        <label style="float:right" for="readonly-input" class="col-sm-3 col-form-label">Invoice Number</label>
 			<div id="output">
                         <div class="card">
 			     <div class="card-body">
 				   <div class="card-title">CUSTOMER DETAILS</div>
 				   <hr>
                                                
-				    <!--<form>-->
+				    <form>
                                         <div class="form-group row">
                                         <label  class="col-sm-6 col-form-label">Personal Details</label>
                                         </div>
 					 <div class="form-group row">
-					  <!--<label for="input-4" class="col-sm-2 col-form-label">Name</label>-->
+					  <label for="input-4" class="col-sm-2 col-form-label">Name</label>
 					  <div class="col-sm-3">
 						<input name="cname" type="text" class="form-control" id="cname" placeholder="Name">
 					  </div>
@@ -124,7 +124,7 @@
                                         <label  class="col-sm-6 col-form-label">Address Details</label>
                                         </div>
 					<div class="form-group row">
-					  <!--<label for="input-4" class="col-sm-2 col-form-label">Customer's A/P</label>-->
+					  <label for="input-4" class="col-sm-2 col-form-label">Customer's A/P</label>
 					  <div class="col-sm-3">
 						<input type="text" name="cap" class="form-control" id="cap" placeholder="Address Line 1">
 					  </div>
@@ -137,7 +137,7 @@
 					</div>
                                         
                                         <div class="form-group row">
-					  <!--<label for="input-4" class="col-sm-2 col-form-label">Customer's GSTN/AADHAR Number</label>-->
+					  <label for="input-4" class="col-sm-2 col-form-label">Customer's GSTN/AADHAR Number</label>
 					  <div class="col-sm-3">
 						<input type="text" name="cstate" class="form-control" id="cstate" placeholder="State">
 					  </div>
@@ -150,7 +150,7 @@
                                         <label  class="col-sm-6 col-form-label">Identification Details</label>
                                         </div>
                                         <div class="form-group row">
-					  <!--<label for="input-4" class="col-sm-2 col-form-label">State</label>-->
+					  <label for="input-4" class="col-sm-2 col-form-label">State</label>
 					  <div class="col-sm-3">
 						<input type="text" name="cgstaadhar" class="form-control" id="cgstaadhar" placeholder="GSTN/AADHAR">
 					  </div>
@@ -160,12 +160,12 @@
                             	 </div>
 			   </div>
 			<div class="form-group row">
-                            <!--<label for="input-1" class="col-sm-2 col-form-label"></label>-->
+                            <label for="input-1" class="col-sm-2 col-form-label"></label>
                               <div class="col-sm-10">
 				<button type="submit" id="btn1" onclick="showForm2()" class="btn btn-primary shadow-primary px-5"><i class="icon-lock"></i> SAVE</button>
                               </div>
 			</div>
-					<!--</form>-->
+					</form>
 			
                          
                     </div>

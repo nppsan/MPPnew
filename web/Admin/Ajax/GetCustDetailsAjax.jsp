@@ -27,14 +27,15 @@
                 <label  class="col-sm-6 col-form-label">Personal Details</label>
             </div>
 	    <div class="form-group row">
+                
                 <div class="col-sm-3">
-                    <input name="cname" value="<%=cm.getCustName()%>" type="text" class="form-control" id="cname" placeholder="Name">
+                    <input name="cname" value="<%=cm.getCustName()%>" type="text" readonly="readonly" class="form-control" id="cname" placeholder="Name">
 		</div>
                 <div class="col-sm-3">
-                    <input name="cemail" value="<%=cm.getEmail()%>" type="text" class="form-control" id="cemail" placeholder="Email">
+                    <input name="cemail" value="<%=cm.getEmail()%>" type="text" readonly="readonly" class="form-control" id="cemail" placeholder="Email">
 		</div>
                 <div class="col-sm-3">
-                    <input type="text" value="<%=cm.getMobile()%>" name="cmobile" class="form-control" id="cmobile" placeholder="Mobile">
+                    <input type="text" value="<%=cm.getMobile()%>" name="cmobile" readonly="readonly" class="form-control" id="cmobile" placeholder="Mobile">
 		</div>
             </div>
             <div class="form-group row">
@@ -42,21 +43,24 @@
             </div>
             <div class="form-group row">
                 <div class="col-sm-3">
-                    <input type="text" name="cap" value="<%=cm.getAddrAP()%>" class="form-control" id="cap" placeholder="Address Line 1">
+                    <input type="text" name="cap" value="<%=cm.getAddrAP()%>" readonly="readonly" class="form-control" id="cap" placeholder="Address Line 1">
 		</div>
                 <div class="col-sm-3">
-                    <input type="text" name="ctal" value="<%=cm.getAddrTal()%>" class="form-control" id="ctal" placeholder="Taluka">
+                    <input type="text" name="ctal" value="<%=cm.getAddrTal()%>" readonly="readonly" class="form-control" id="ctal" placeholder="Taluka">
 		</div>
                 <div class="col-sm-3">
-                    <input type="text" name="cdist" value="<%=cm.getAddrDist()%>" class="form-control" id="cdist" placeholder="District">
+                    <input type="text" name="cdist" value="<%=cm.getAddrDist()%>" readonly="readonly" class="form-control" id="cdist" placeholder="District">
 		</div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-3">
-                    <input type="text" name="cstate" value="<%=cm.getAddrState()%>" class="form-control" id="cstate" placeholder="State">
+                    <input type="text" name="cstate" value="<%=cm.getAddrState()%>" readonly="readonly" class="form-control" id="cstate" placeholder="State">
 		</div>
                 <div class="col-sm-3">
-                    <input type="text" name="cstcode" value="<%=cm.getStateCode()%>" class="form-control" id="cstcode" placeholder="State Code">
+                    <input type="text" name="cstcode" value="<%=cm.getStateCode()%>" readonly="readonly" class="form-control" id="cstcode" placeholder="State Code">
+		</div>
+                <div class="col-sm-3">
+                    <input name="cid" value="<%=cm.getId()%>" type="hidden" readonly="readonly" class="form-control" id="cid" placeholder="Name">
 		</div>
             </div>
             <div class="form-group row">
@@ -64,7 +68,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-sm-3">
-                    <input type="text" name="cgstaadhar" value="<%=cm.getGstnAadhar()%>" class="form-control" id="cgstaadhar" placeholder="GSTN/AADHAR">
+                    <input type="text" name="cgstaadhar" value="<%=cm.getGstnAadhar()%>" readonly="readonly" class="form-control" id="cgstaadhar" placeholder="GSTN/AADHAR">
 		</div>
             </div>
     </div>

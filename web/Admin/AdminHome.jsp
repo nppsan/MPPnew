@@ -195,7 +195,7 @@
                                             <div class="form-group">
                                                 <label class="control-label mb-10 text-left">&nbsp;</label>
                                                 <div class='input-group date' >
-                                                    <a id="btnclick" class="btn btn-md btn-danger go text-white" >Click</a>
+                                                    <a id="btnclick" class="btn btn-md btn-danger go text-white" >GET</a>
 
                                                 </div>
 
