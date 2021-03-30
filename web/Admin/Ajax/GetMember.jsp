@@ -1,8 +1,10 @@
+<%@page import="Com.Admin.Dao.SalesDao"%>
+<%@page import="Com.Admin.Model.SalesModel"%>
 <%@page import="java.text.ParseException"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="Com.Member.Dao.MemberDao"%>
-<%@page import="Com.Member.Model.MemberModel"%>
+<%--<%@page import="Com.Member.Dao.MemberDao"%>
+<%@page import="Com.Member.Model.MemberModel"%>--%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.List"%>
 
@@ -65,10 +67,10 @@
 //
 //    System.out.println("todate" + tod);
 //    System.out.println("todate" + todate);
-//    System.out.println("From" + fromdate);
+//    System.out.println("From" + fromdate);id, bid, cid, invDate, invNum
 
-    String query1 = "from MemberModel where RDate  Between '" + fromdate + "' AND '" + todate1 + "'";
-    List<MemberModel> Leads = new MemberDao().QueryList(query1);
+    String query1 = "from SalesModel where invDate  Between '" + fromdate + "' AND '" + todate1 + "'";
+    List<SalesModel> Leads = new SalesDao().QueryList(query1);
 
     int i = 1;
 %>

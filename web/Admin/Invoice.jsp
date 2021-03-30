@@ -1,3 +1,5 @@
+<%@page import="Com.Admin.Dao.SalesDao"%>
+<%@page import="Com.Admin.Model.SalesModel"%>
 <%@page import="java.util.Arrays"%>
 <%@page import="java.math.RoundingMode"%>
 <%@page import="java.text.DecimalFormat"%>
@@ -32,6 +34,21 @@
 	   color:#fff;
 	   font-family: 'Muli', sans-serif;
    }
+   .goback
+   {
+           
+	   width:140px;
+	   height:35px;
+	   line-height:32px;
+	   text-align:center;
+	   border:none;
+	   border-radius:20px;
+	   background:#0044cc;
+	   margin-bottom:20px;
+	   cursor:pointer;
+	   color:#fff;
+	   font-family: 'Muli', sans-serif;
+   }
 </style>
 <style>
     .vertical-line{
@@ -52,6 +69,9 @@
             a.document.close(); 
             a.print(); 
         } 
+        function goBack(){
+            window.location = "../Admin/AdminHome.jsp"
+        }
     </script> 
 <script src="js/toword.js"></script>
 
@@ -61,18 +81,33 @@
 <body>
     
     <%
-        List<CustDetailsModel> s2 = new CustDetailsDao().getAll();
-        int max=s2.size();
-        CustDetailsModel cd1 = new CustDetailsModel();
-        cd1=s2.get(max-1);
-        int inv = cd1.getInvNum();
-        System.out.println(""+inv);
+//        List<CustDetailsModel> s2 = new CustDetailsDao().getAll();
+//        int max=s2.size();
+//        CustDetailsModel cd1 = new CustDetailsModel();
+//        cd1=s2.get(max-1);
+//        int inv = cd1.getInvNum();
+//        System.out.println(""+inv);
         //inv+=1;
-        //System.out.println(""+inv);
+//        System.out.println("inv number"+request.getParameter("innumber"));
+//        int inv = Integer.parseInt(request.getParameter("innumber"));
+//        System.out.println(""+inv);
+        List<SalesModel> s2 = new SalesDao().getAll();
+            int max = s2.size();
+            int inv;
+            if (max == 0) {
+                inv = 1000;
+            } else {
+                SalesModel cd = new SalesModel();
+                cd = s2.get(max - 1);
+                inv = cd.getInvNum();
+            }
+//            inv += 1;
+            System.out.println(""+inv);
     %>
     <%
+        SalesModel sm = new SalesDao().getByNaturalId(inv);
         CustDetailsDao cd = new CustDetailsDao();
-        CustDetailsModel cm = cd.getByNaturalId(inv);
+        CustDetailsModel cm = cd.getById(sm.getCid());
         
         
         BillDetailsDao bd = new BillDetailsDao();
@@ -86,13 +121,9 @@
     %>
     
     <div onclick="printDiv()" class="print">Print Invoice</div>
+    <div onclick="goBack()" class="goback">GO BACK</div>
 
-<!--<h2 align="center">MAHALAXMI POLYMER PRODUCTS</h2>
-<pre style="font-size: 12px; text-align:center; font-family: 'Muli', sans-serif;"> 
-     SURVEY NO.118|GAIKWAD WAREHOUSES
-     NEAR OM LOGISTICS LTD| CHIMBALI | TAL-KHED | DIST-PUNE 410501 | MAHARASHTRA(INDIA)
-     Email:prafullapatil.audax@gmail.com | +91 9420497501 | TOLL FREE-1800 123 8739 </pre>
-<pre style="font-size: 12px; text-align:center; font-family: 'Muli', sans-serif;"><strong> GSTIN:27AAZFM0281E1Z0 </strong> </pre>  -->
+
 <div id="panel">
     <h2 align="center">MAHALAXMI POLYMER PRODUCTS</h2>
 <pre style="font-size: 12px; text-align:center; font-family: 'Muli', sans-serif;"> 
@@ -368,7 +399,7 @@
 Make all Cheques/DD/RTGS/NEFT payable to MAHALAXMI POLYMER PRODUCTS
 If you have any query concerning this invoice, contact us with above details.
                       </pre>
-                      <h4> THANK YOU FOR BUSINESS WITH US!</h4>
+                      <h4> THANK YOU FOR DOING BUSINESS WITH US!</h4>
                       <h6>#This is the computer generated invoice needs no stamp or signature.</h6>
                   </td>
                   <td align="center"><strong>Grand Total</strong></td>

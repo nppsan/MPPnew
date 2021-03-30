@@ -171,13 +171,13 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header d100">
-
+                                    <form id="form3" action="../GetSalesDetailsServlet" method="POST">
                                     <div class="col-lg-12 d100">
                                         <div class="col-lg-3 d33">
                                             <div class="form-group">
                                                 <label class="control-label mb-10 text-left"> pick from date</label>
                                                 <div class='input-group date' id='ok'>
-                                                    <input type='date' id="fromdate" class="form-control" />
+                                                    <input type='date' name="fromdate" id="fromdate" class="form-control" />
 
                                                 </div>
                                             </div>
@@ -186,7 +186,7 @@
                                             <div class="form-group">
                                                 <label class="control-label mb-10 text-left">pick to date</label>
                                                 <div class='input-group date' id='ok'>
-                                                    <input type='date' id="todate" class="form-control" />
+                                                    <input type='date' name="todate" id="todate" class="form-control" />
 
                                                 </div>
                                             </div>
@@ -195,13 +195,15 @@
                                             <div class="form-group">
                                                 <label class="control-label mb-10 text-left">&nbsp;</label>
                                                 <div class='input-group date' >
+                                                    <!--<button type="submit">-->
                                                     <a id="btnclick" class="btn btn-md btn-danger go text-white" >GET</a>
-
+                                                    <!--</button>-->
                                                 </div>
 
                                             </div>
                                         </div>
                                     </div>
+                                    </form>
                                 </div>
 
                             </div>
@@ -352,22 +354,88 @@
         </script>
         <script>
             $('document').ready(function() {
+                                                    var now = new Date();
 
+                                                    var day = ("0" + now.getDate()).slice(-2);
+                                                    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+                                                    var today1 = now.getFullYear() + "-" + (month) + "-" + (day);
+                                                    document.getElementById("fromdate").value = today1;
+                                                    document.getElementById("todate").value = today1;
                 $('.go').click(function() {
 
+//                    var fromdate = "2021-03-27";
                     var fromdate = $("#fromdate").val();
+//                    var todate = "2021-03-27";
                     var todate = $("#todate").val();
-
-                    $.get("Ajax/GetMember.jsp", {fromdate: fromdate, todate: todate}, function(data) {
-
-
-                        $('#LDiv').html(data);
-                    });
+//                    alert(fromdate);
+//                    alert(todate);
+//                    
+//                    alert(today1);
+//                    document.getElementById("todate").value = today1;
+//                    document.getElementById("fromdate").value = today1;
+                    $.ajax({
+                                                            url: "Ajax/GetSalesAjax.jsp",
+                                                            type: "POST",
+                                                            data: {fromdate: fromdate, todate: todate},
+                                                            
+//                    $(document).ajaxStart(function() {
+//                        alert("Start");
+//                    });
+                                                            success: function(response) {
+                                                                $('#LDiv').html(response);
+//                        alert('hi112')
+//                        $(".loader").hide();
+//                        $("#tb2").hide();
+//                        $("#form1").show();
+//                        $("#output").html(response);
+//                        var url = 'Invoice.jsp';
+//                        $(location).prop('href', url);
+                                                            },
+                                                            error: function(jqXHR, textStatus, errorThrown) {
+                                                                console.log(textStatus, errorThrown);
+                                                                alert("Something Went Wrong...!!!");
+                                                            }
+                                                        });
+//                    $.get({
+//                        
+//                        url: "Ajax/GetSalesAjax.jsp",
+//                                                            type: "post",
+//                                                            data: {fromdate: fromdate, todate: todate},
+//                                                            complete: function(jqXHR, textStatus) {
+//
+//                                                            },
+////                    $(document).ajaxStart(function() {
+////                        alert("Start");
+////                    });
+//                                                            success: function(data) {
+//                                                                $('#LDiv').html(data);
+////                        alert('hi112')
+////                        $(".loader").hide();
+////                        $("#tb2").hide();
+////                        $("#form1").show();
+////                        $("#output").html(response);
+////                        var url = 'Invoice.jsp';
+////                        $(location).prop('href', url);
+//                                                            },
+//                                                            error: function(jqXHR, textStatus, errorThrown) {
+//                                                                console.log(textStatus, errorThrown);
+//                                                                alert("Something Went Wrong...!!!");
+//                                                            },
+//                    }, 
+////                    type: "post",
+////                    {fromdate: fromdate, todate: todate}, 
+//                    function(data) {
+//
+//
+//                        $('#LDiv').html(data);
+//                    });
                     //                    location.reload();
                 });
-                var today = moment().format('YYYY-MM-DD');
-                document.getElementById("todate").value = today;
-                document.getElementById("fromdate").value = today;
+//                var today = moment().format('YYYY-MM-DD');
+//                alert(today);
+//                document.getElementById("todate").value = today;
+//                document.getElementById("fromdate").value = today;
             });
         </script>
         <!-- Bootstrap core JavaScript-->

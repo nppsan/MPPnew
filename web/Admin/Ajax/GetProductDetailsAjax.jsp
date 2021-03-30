@@ -15,5 +15,5 @@
 %>
 
 <div class="col-sm-4">
-    <input style="margin-bottom: 13px; margin-left: 55%" type="text" class="form-control" id="prate" value="<%=pm.getRate()%>" readonly="readonly" name="rate">
+    <input style="margin-bottom: 13px; width: auto" type="text" class="form-control" id="prate" value="<%=pm.getRate()%>" readonly="readonly" name="rate">
 </div>

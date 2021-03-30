@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Com.Admin.Controller;
 
 import Com.Admin.Dao.AdminDao;
@@ -45,40 +44,51 @@ public class SuperAdminRegisterServlet extends HttpServlet {
             String pwd = request.getParameter("pwd");
             //String gender = request.getParameter("gender");
             //String city = request.getParameter("city");
-            
+
             System.out.println("SuperAdminRegisterServlet");
             System.out.println("name" + name);
-            
+
             AdminModel u = new AdminModel();
-            
-            u.setName(name);
-            u.setEmail(email);
-            u.setMobile(mobile);
-            u.setUname(uname);
-            u.setPwd(pwd);
-
-            AdminDao ud = new AdminDao();
-
-            boolean temp = false;
-            temp = ud.save(u);
-            if (temp) {
+            AdminModel u1 = new AdminModel();
+            AdminDao ad = new AdminDao();
+            u1 = ad.getByUsername(uname);
+            if(u1 != null) {
+             if (u1.getUname().equals(uname)) {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('User save Sucessfully  !!');");
-                out.println("location='Admin/Login.jsp';");
-                out.println("</script>");
-//                response.sendRedirect("Login.jsp");
-            } else {
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('User not save !!');");
+                out.println("alert('Username already present. Please try different username!!');");
                 out.println("location='Admin/SuperAdminSignUp.jsp';");
                 out.println("</script>");
+            } 
+            } else {
+                u.setName(name);
+                u.setEmail(email);
+                u.setMobile(mobile);
+                u.setUname(uname);
+                u.setPwd(pwd);
+
+                AdminDao ud = new AdminDao();
+
+                boolean temp = false;
+                temp = ud.save(u);
+                if (temp) {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("alert('User save Sucessfully  !!');");
+                    out.println("location='Admin/Login.jsp';");
+                    out.println("</script>");
+//                response.sendRedirect("Login.jsp");
+                } else {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("alert('User not save !!');");
+                    out.println("location='Admin/SuperAdminSignUp.jsp';");
+                    out.println("</script>");
 //                response.sendRedirect("register.jsp");
+                }
             }
 
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet SuperAdminRegisterServlet</title>");            
+            out.println("<title>Servlet SuperAdminRegisterServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet SuperAdminRegisterServlet at " + request.getContextPath() + "</h1>");

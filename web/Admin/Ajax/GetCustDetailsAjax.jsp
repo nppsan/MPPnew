@@ -19,7 +19,7 @@
 
 
 
-<div class="card">
+<div class="card" style="width: 170%">
     <div class="card-body">
         <div class="card-title">CUSTOMER DETAILS</div>
 	    <hr>

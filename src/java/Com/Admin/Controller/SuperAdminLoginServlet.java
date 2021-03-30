@@ -41,19 +41,19 @@ public class SuperAdminLoginServlet extends HttpServlet {
             String username = request.getParameter("uname");
             String password = request.getParameter("password");
            
-            System.out.println("User Name" + username);
-            System.out.println("Password" + password);
+//            System.out.println("User Name" + username);
+//            System.out.println("Password" + password);
             
             AdminDao a = new AdminDao();
             if(a.login(username,password))
             {
                 
-                 System.out.println("sdfdsf in if" );
+//                 System.out.println("sdfdsf in if" );
                 HttpSession session = request.getSession();
                 session.setAttribute("user", username);
-                out.println(session.getAttribute("user"));
+//                out.println(session.getAttribute("user"));
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Admin Login Sucessfull !!');");
+//                out.println("alert('Admin Login Sucessfull !!');");
                 //out.println("window.open('Admin/NewHome.jsp','_blank');");
                 out.println("location='Admin/AdminHome.jsp';");
                 out.println("</script>");

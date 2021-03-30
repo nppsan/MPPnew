@@ -27,7 +27,7 @@
         float disco = Float.parseFloat(request.getParameter("disco"));
         
         
-        System.out.println("/AddCustDetailsServelet");
+        System.out.println("/AddShowCartAjax");
         System.out.println("ajax page" + invNum);
         System.out.println("Invoice Numb " + invNum);
         System.out.println("Product Name " + pname );
@@ -133,7 +133,7 @@
         $('#document').ready(function() {
   
             $('#cnfcartbtn').click(function() {
-                   alert('confirm cart clicked');
+//                   alert('confirm cart clicked');
                 
 
                 $.ajax({

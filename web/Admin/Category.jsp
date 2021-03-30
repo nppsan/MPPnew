@@ -201,7 +201,7 @@
 
 
                 var table = $('#example').DataTable({
-                    lengthChange: false,
+                    lengthChange: true,
                     buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
                 });
 

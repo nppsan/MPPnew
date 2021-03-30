@@ -1,4 +1,6 @@
 
+<%@page import="Com.Admin.Dao.AdminDao"%>
+<%@page import="Com.Admin.Model.AdminModel"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <script src="../../js/Alertajax.js" type="text/javascript"></script>
@@ -72,8 +74,14 @@
         </ul>
 
         <ul class="navbar-nav align-items-center right-nav-link">
+            <%
+                HttpSession session5 = request.getSession();
+                String uname = String.valueOf(session5.getAttribute("user"));
+                System.out.println(uname);
+                AdminModel am = new AdminDao().getByUsername(uname);
+            %>
 
-            <li style="color:white;margin-right:20px; ">test</li>
+            <li style="color:white;margin-right:20px; "><%=session5.getAttribute("user")%></li>
             <li style="margin-right:30px">
                 <div id="divLocal" style="color:white">
 
@@ -107,8 +115,8 @@
 
                                 </div>
                                 <div class="media-body">
-                                    <h6 class="mt-2 user-title">tenamest</h6>
-                                    <p class="user-subtitle">email</p>
+                                    <h6 class="mt-2 user-title">ADMIN</h6>
+                                    <p class="user-subtitle"><%=am.getEmail()%></p>
                                 </div>
                             </div>
                         </a>

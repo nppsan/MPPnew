@@ -27,9 +27,9 @@ public class CustDetailsModel {
 //    @OneToMany( fetch=FetchType.EAGER, cascade=CascadeType.ALL)
 //    private List<BillDetailsModel> bills;
 //    
-    @NaturalId
-    
-    private int invNum;
+//    @NaturalId
+//    
+//    private int invNum;
     private String mobile;
     private String email;
     private String custName;
@@ -70,13 +70,13 @@ public class CustDetailsModel {
         this.id = id;
     }
 
-    public int getInvNum() {
-        return invNum;
-    }
-
-    public void setInvNum(int invNum) {
-        this.invNum = invNum;
-    }
+//    public int getInvNum() {
+//        return invNum;
+//    }
+//    
+//    public void setInvNum(int invNum) {
+//        this.invNum = invNum;
+//    }
 
     public String getCustName() {
         return custName;

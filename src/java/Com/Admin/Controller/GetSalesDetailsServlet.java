@@ -6,21 +6,23 @@
 
 package Com.Admin.Controller;
 
+import Com.Admin.Dao.SalesDao;
+import Com.Admin.Model.SalesModel;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author npp
+ * @author NPP
  */
-@WebServlet(name = "AdminLogoutServlet", urlPatterns = {"/AdminLogoutServlet"})
-public class AdminLogoutServlet extends HttpServlet {
+@WebServlet(name = "GetSalesDetailsServlet", urlPatterns = {"/GetSalesDetailsServlet"})
+public class GetSalesDetailsServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,29 +35,20 @@ public class AdminLogoutServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            
-            response.setContentType("text/html");  
-            PrintWriter out=response.getWriter();  
-              
-           // request.getRequestDispatcher("link.html").include(request, response);  
-              
-            HttpSession session=request.getSession();  
-//            out.println(session.getAttribute("user"));
-            session.invalidate();  
-            
-            if(session == null){ 
-                out.println(session.getAttribute("user")); 
-            }
-            
-              
-            out.println("<script type=\"text/javascript\">");
-//            out.println("alert('You have been logged out Sucessfully  !!');");
-            out.println("location='Admin/Login.jsp';");
-            //out.println("window.close();");
-           // out.print("You are successfully logged out!");  
-            out.println("</script>");
-              
-            out.close();  
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            String fromdate = request.getParameter("fromdate");
+    String todate1 = request.getParameter("todate");
+    System.out.println(fromdate);
+    System.out.println(todate1);
+    
+    List <SalesModel> saleList = new SalesDao().queryList(fromdate, todate1);
+    System.out.println(saleList);
+    
+    List <SalesModel> saleList1 = new SalesDao().getAll();
+    System.out.println(saleList1);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -96,5 +89,5 @@ public class AdminLogoutServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-}
 
+}

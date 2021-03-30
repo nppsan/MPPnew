@@ -9,7 +9,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
 
-    
+        
+        long cid = Long.parseLong(request.getParameter("cid"));
         int invNum = Integer.parseInt(request.getParameter("invNum"));
         String invDate = request.getParameter("invDate");
         String reverseCharge = request.getParameter("reverseCharge");
@@ -27,13 +28,15 @@
         String consState = request.getParameter("consState");
         int consStateCode = Integer.parseInt(request.getParameter("consStateCode"));
         
-        System.out.println("/AddCustDetailsServelet");
+        System.out.println("/AddBillDetailsServelet");
         System.out.println("Invoice Numb" + invNum);
         System.out.println("Customer Name "+ consName );
+        System.out.println("Customer ID "+ cid );
         
         
         BillDetailsModel b = new BillDetailsModel();
         
+        b.setCid(cid);
         b.setConsAP(consAP);
         b.setConsDist(consDist);
         b.setConsGstnAadhar(consGstnAadhar);

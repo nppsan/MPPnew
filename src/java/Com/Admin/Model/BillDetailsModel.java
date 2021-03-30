@@ -23,6 +23,7 @@ public class BillDetailsModel {
 //    @JoinColumn(name="CustDetailsModel_id", nullable=false)
    
     private long id;
+    private long cid;
     
     @NaturalId
     private int invNum;
@@ -180,6 +181,14 @@ public class BillDetailsModel {
 
     public void setConsStateCode(int consStateCode) {
         this.consStateCode = consStateCode;
+    }
+
+    public long getCid() {
+        return cid;
+    }
+
+    public void setCid(long cid) {
+        this.cid = cid;
     }
     
     

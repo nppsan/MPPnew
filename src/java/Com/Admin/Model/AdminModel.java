@@ -9,6 +9,7 @@ package Com.Admin.Model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import org.hibernate.annotations.NaturalId;
 
 /**
  *
@@ -20,7 +21,10 @@ public class AdminModel {
     
     @Id @GeneratedValue
     private long Id;
+    
+    @NaturalId
     private String name;
+    
     private String email;
     private String mobile;
     private String uname;

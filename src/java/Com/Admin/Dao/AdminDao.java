@@ -27,7 +27,8 @@ public class AdminDao {
         Session session = HibernateUtil.getSessionFactory().openSession();
      
         Transaction t = null;
-
+        
+        
         try {
             t = session.getTransaction();
             t.begin();
@@ -109,6 +110,30 @@ public class AdminDao {
         try {
 
             c.add(Restrictions.eq("Id", id));
+            u = (AdminModel) c.uniqueResult();
+            tx.commit();
+            if (u != null) {
+                return u;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            tx.rollback();
+        } finally {
+            hsession.close();
+        }
+        return null;
+    }
+    
+    public AdminModel getByUsername(String uname) {
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session hsession = sf.openSession();
+        AdminModel u = null;
+        Criteria c = hsession.createCriteria(AdminModel.class);
+        Transaction tx = hsession.beginTransaction();
+        try {
+
+            c.add(Restrictions.eq("uname", uname));
             u = (AdminModel) c.uniqueResult();
             tx.commit();
             if (u != null) {

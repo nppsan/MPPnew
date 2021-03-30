@@ -34,7 +34,9 @@ public class SalesModel{
     @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
     private List<SaleProductModel> products;
     private String invDate;
-
+    private long bid;
+    private long cid;
+//    private float finalBillAmt;
 //    private float quantity;
 //    private float rate;
 //    private float amt;
@@ -83,6 +85,30 @@ public class SalesModel{
 //        this.id = id;
 //        this.invNum = invNum;
 //        this.products = products;
+//    }
+
+    public long getBid() {
+        return bid;
+    }
+
+    public void setBid(long bid) {
+        this.bid = bid;
+    }
+
+    public long getCid() {
+        return cid;
+    }
+
+    public void setCid(long cid) {
+        this.cid = cid;
+    }
+
+//    public float getFinalBillAmt() {
+//        return finalBillAmt;
+//    }
+//
+//    public void setFinalBillAmt(float finalBillAmt) {
+//        this.finalBillAmt = finalBillAmt;
 //    }
     
     
