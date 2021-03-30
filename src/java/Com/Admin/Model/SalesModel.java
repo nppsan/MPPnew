@@ -36,7 +36,7 @@ public class SalesModel{
     private String invDate;
     private long bid;
     private long cid;
-//    private float finalBillAmt;
+    private float finalBillAmt;
 //    private float quantity;
 //    private float rate;
 //    private float amt;
@@ -103,13 +103,13 @@ public class SalesModel{
         this.cid = cid;
     }
 
-//    public float getFinalBillAmt() {
-//        return finalBillAmt;
-//    }
-//
-//    public void setFinalBillAmt(float finalBillAmt) {
-//        this.finalBillAmt = finalBillAmt;
-//    }
+    public float getFinalBillAmt() {
+        return finalBillAmt;
+    }
+
+    public void setFinalBillAmt(float finalBillAmt) {
+        this.finalBillAmt = finalBillAmt;
+    }
     
     
 }

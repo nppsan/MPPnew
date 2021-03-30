@@ -1,4 +1,13 @@
 
+<%@page import="java.time.LocalDateTime"%>
+<%@page import="java.time.format.DateTimeFormatter"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Set"%>
+<%@page import="java.util.HashSet"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="Com.Admin.Dao.SalesDao"%>
+<%@page import="Com.Admin.Model.SalesModel"%>
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="Com.Admin.Dao.CustDetailsDao"%>
 <%@page import="Com.Admin.Model.CustDetailsModel"%>
 <%@page import="Com.Admin.Model.CategoryModel"%>
@@ -10,27 +19,23 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" session="false"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
-<%
-    HttpSession sessions = request.getSession(false);
-            if (sessions == null )
-            {
-                
-                 System.err.println("Session not started, Login first");
-                 response.sendRedirect("Login.jsp");
+<%    HttpSession sessions = request.getSession(false);
+    if (sessions == null) {
+
+        System.err.println("Session not started, Login first");
+        response.sendRedirect("Login.jsp");
 %>
 
-                <script>//window.open("Login.jsp"); </script>
-<% 
-
-                    return;
-            }else {
-                if(sessions.getAttribute("user")== null)
-                {
-                    response.sendRedirect("Login.jsp");
-                    return;
-                }
-            }
-           // List<CustDetailsModel> cm = new CustDetailsDao().getAll();
+<script>//window.open("Login.jsp"); </script>
+<%
+        return;
+    } else {
+        if (sessions.getAttribute("user") == null) {
+            response.sendRedirect("Login.jsp");
+            return;
+        }
+    }
+    // List<CustDetailsModel> cm = new CustDetailsDao().getAll();
 //            CustDetailsDao cd = new CustDetailsDao();
 //            if(cd.getById(1)==null){
 //            CustDetailsModel p1 = new CustDetailsModel();
@@ -52,9 +57,9 @@
 //            System.out.println(t);
 //            System.out.println(p1);
 //            }
-    
+
 %>
-<script> 
+<script>
 //    window.close(); 
 //    window.open("AdminHome.jsp");
 //    window.location.reload();
@@ -87,17 +92,20 @@
         <link href="assets/css/app-style.css" rel="stylesheet"/>
         <script src="js/Alertajax.js" type="text/javascript"></script>
         <link href="Css/newcss.css" rel="stylesheet" type="text/css"/>
-        
-        
+
+
         <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
         <script src="dist/jquery.userTimeout.js"></script>
         <link rel="stylesheet" href="bootstrap.min.css">
         <script src="bootstrap.min.js"></script>
+        <style>
+
+        </style>
     </head>
 
     <body>
         <script type="text/javascript">
-            
+
 //            $(document).userTimeout({
 //                logouturl: "Admin/Login.jsp",
 //               // session: 3000
@@ -144,13 +152,13 @@
 //                    modalStayLoggedBtn: 'Stay Logged In'  
 //    HttpSession. setMaxInactiveInterval(int seconds)
 //                });
-            function preloadFunc()
-            {
-                 alert("PreLoad");
-                 window.location = "../AdminHomeServlet";
-                }
-           // window.onpaint = preloadFunc();
-            </script>
+    function preloadFunc()
+    {
+        alert("PreLoad");
+        window.location = "../AdminHomeServlet";
+    }
+    // window.onpaint = preloadFunc();
+        </script>
         <!-- Start wrapper-->
         <div id="wrapper">
 
@@ -172,44 +180,71 @@
                             <div class="card">
                                 <div class="card-header d100">
                                     <form id="form3" action="../GetSalesDetailsServlet" method="POST">
-                                    <div class="col-lg-12 d100">
-                                        <div class="col-lg-3 d33">
-                                            <div class="form-group">
-                                                <label class="control-label mb-10 text-left"> pick from date</label>
-                                                <div class='input-group date' id='ok'>
-                                                    <input type='date' name="fromdate" id="fromdate" class="form-control" />
+                                        <div class="col-lg-12 d100">
+                                            <div class="col-lg-3 d33">
+                                                <div class="form-group">
+                                                    <label class="control-label mb-10 text-left"> pick from date</label>
+                                                    <div class='input-group date' id='ok'>
+                                                        <input type='date' name="fromdate" id="fromdate" class="form-control" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 d33">
+                                                <div class="form-group">
+                                                    <label class="control-label mb-10 text-left">pick to date</label>
+                                                    <div class='input-group date' id='ok'>
+                                                        <input type='date' name="todate" id="todate" class="form-control" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 d33">
+                                                <div class="form-group">
+                                                    <label class="control-label mb-10 text-left">&nbsp;</label>
+                                                    <div class='input-group date' >
+                                                        <!--<button type="submit">-->
+                                                        <a id="btnclick" class="btn btn-md btn-danger go text-white" >GET</a>
+                                                        <!--</button>-->
+                                                    </div>
 
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 d33">
-                                            <div class="form-group">
-                                                <label class="control-label mb-10 text-left">pick to date</label>
-                                                <div class='input-group date' id='ok'>
-                                                    <input type='date' name="todate" id="todate" class="form-control" />
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 d33">
-                                            <div class="form-group">
-                                                <label class="control-label mb-10 text-left">&nbsp;</label>
-                                                <div class='input-group date' >
-                                                    <!--<button type="submit">-->
-                                                    <a id="btnclick" class="btn btn-md btn-danger go text-white" >GET</a>
-                                                    <!--</button>-->
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
                                     </form>
                                 </div>
 
                             </div>
 
                         </div>
-
+<%
+    String fromdate = "2021-03-26"; 
+    String todate1 = "2021-03-30";
+//    System.out.println(fromdate);
+//    System.out.println(todate1);
+    DecimalFormat df = new DecimalFormat();
+    df.setMaximumFractionDigits(1);
+//
+//    List<SalesModel> saleList1 = new SalesDao().queryList(fromdate, todate1);
+//
+//    Iterator<SalesModel> itObjectForList1 = saleList1.iterator();
+//    while (itObjectForList1.hasNext()) {
+//        System.out.println(itObjectForList1.next());
+//    }
+//
+//    System.out.println("After converting into set ----");
+//
+//    Set<SalesModel> set1 = new HashSet<SalesModel>(saleList1);
+//    Iterator<SalesModel> itObjectForSet = set1.iterator();
+//
+//    List<SalesModel> finalList1 = new ArrayList<SalesModel>(set1);
+//
+//    while (itObjectForSet.hasNext()) {
+//        System.out.println(itObjectForSet.next());
+////                        finalList.add(itObjectForSet.next());
+//    }
+//    SELECT * FROM mpp.salesmodel s WHERE invDate BETWEEN "2021-03-26" AND "2021-03-27";
+%>
 
                         <div class="col-lg-12">
                             <div class="card">
@@ -232,43 +267,209 @@
 
                 </div>
                 <!-- End container-fluid-->
-                <%
-                List<ProductModel> s = new ProductDao().getAll();
-                  
-                List<CategoryModel> s1 = new CategoryDao().getAll();
-                
+                <%                    List<ProductModel> s = new ProductDao().getAll();
+
+                    List<CategoryModel> s1 = new CategoryDao().getAll();
+                    //                    String fromdate = request.getParameter("fromdate");
+                    //                    String todate1 = request.getParameter("todate");
+
+                    float totalToday = 0;
+                    float totalLWeek = 0;
+                    float totalLMonth = 0;
+                    float totalLYear = 0;
+
+                    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                    LocalDateTime now = LocalDateTime.now();
+                    Calendar cal = Calendar.getInstance();
+                    cal.setTime(new Date());
+                    System.out.println(dtf.format(now));
+                    cal.add(Calendar.DATE, -1);
+//                            now.plusDays(-1);
+//                    String fromdate;
+//                    String todate1;
+
+//                    DecimalFormat df = new DecimalFormat();
+
+                    df.setMaximumFractionDigits(1);
+
+                    fromdate = dtf.format(now);
+                    todate1 = dtf.format(now);
+                    System.out.println("fromdate" + fromdate);
+                    System.out.println("todate" + todate1);
+                    List<SalesModel> saleList = new SalesDao().queryList(fromdate, todate1);
+                    Set<SalesModel> set = new HashSet<SalesModel>(saleList);
+                    List<SalesModel> finalList = new ArrayList<SalesModel>(set);
+                    for (SalesModel h5 : finalList) {
+                        totalToday = totalToday + h5.getFinalBillAmt();
+                    }
+
+                    fromdate = dtf.format(now.plusWeeks(-1));
+                    todate1 = dtf.format(now);
+                    System.out.println("fromdate" + fromdate);
+                    System.out.println("todate" + todate1);
+                    saleList = new SalesDao().queryList(fromdate, todate1);
+                    set = new HashSet<SalesModel>(saleList);
+                    finalList = new ArrayList<SalesModel>(set);
+                    for (SalesModel h5 : finalList) {
+                        totalLWeek = totalLWeek + h5.getFinalBillAmt();
+                    }
+
+                    fromdate = dtf.format(now.plusMonths(-1));
+                    todate1 = dtf.format(now);
+                    System.out.println("fromdate" + fromdate);
+                    System.out.println("todate" + todate1);
+                    saleList = new SalesDao().queryList(fromdate, todate1);
+                    set = new HashSet<SalesModel>(saleList);
+                    finalList = new ArrayList<SalesModel>(set);
+                    for (SalesModel h5 : finalList) {
+                        totalLMonth = totalLMonth + h5.getFinalBillAmt();
+                    }
+
+                    fromdate = dtf.format(now.plusYears(-1));
+                    todate1 = dtf.format(now);
+                    System.out.println("fromdate" + fromdate);
+                    System.out.println("todate" + todate1);
+                    saleList = new SalesDao().queryList(fromdate, todate1);
+                    set = new HashSet<SalesModel>(saleList);
+                    finalList = new ArrayList<SalesModel>(set);
+                    for (SalesModel h5 : finalList) {
+                        totalLYear = totalLYear + h5.getFinalBillAmt();
+                    }
+//                    Iterator<SalesModel> itObjectForList = saleList.iterator();
+//
+//                    while (itObjectForList.hasNext () 
+//                        ) {
+//                        System.out.println(itObjectForList.next());
+//                    }
+
+//                    System.out.println (
+//                    "After converting into set ----");
+//                    Iterator<SalesModel> itObjectForSet = set.iterator();
+//
+//
+//                    while (itObjectForSet.hasNext () 
+//                        ) {
+//                        System.out.println(itObjectForSet.next());
+////                        finalList.add(itObjectForSet.next());
+//                    }
+
                 %>
-                
-                <div class="col-12 col-lg-6 col-xl-3 border-secondary-light">
-		      <div class="card-body">
-              <div class="media">
-              <div class="media-body text-left">
-                <h4 class="text-success"><%=s1.size()%></h4>
-                <span style="color: #040505" class="text-dark"> Categories</span>
-              </div>
-              <div class="align-self-center w-circle-icon rounded bg-success shadow-success">
-                <i class="icon-pie-chart text-white"></i></div>
-            </div>
-            </div>
-            </div>
+
+                <div class="card">
+                    <div class="card-title">TOTAL SALE AMOUNT</div>
+                    <div class="card bg-transparent shadow-none mt-3 border border-secondary-light">
+
+                        <div class="card-content">
+                            <div class="row row-group m-0">
+                                <div class="col-12 col-lg-6 col-xl-3 border-secondary-light">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <div class="media-body text-left">
+                                                <h4 class="text-info"><%=df.format(totalToday)%></h4>
+                                                <span style="color: #040505" class="text-dark">
+                                                    <strong>
+                                                        Today</strong>
+                                                </span>
+                                            </div>
+                                            <div class="align-self-center w-circle-icon rounded bg-success shadow-success">
+                                                <i class="icon-pie-chart text-white"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 col-xl-3 border-secondary-light">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <div class="media-body text-left">
+                                                <h4 class="text-danger"><%=df.format(totalLWeek)%></h4>
+                                                <span style="color: #040505" class="text-dark">
+                                                    <strong>    Last Week</strong>
+                                                </span>
+                                            </div>
+                                            <div class="align-self-center w-circle-icon rounded bg-success shadow-success">
+                                                <i class="icon-pie-chart text-white"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-3 border-secondary-light">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <div class="media-body text-left">
+                                                <h4 class="text-success"><%=df.format(totalLMonth)%></h4>
+                                                <span style="color: #040505" class="text-dark">
+                                                    <strong>
+                                                        Last Month</strong>
+                                                </span>
+                                            </div>
+                                            <div class="align-self-center w-circle-icon rounded bg-success shadow-success">
+                                                <i class="icon-pie-chart text-white"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6 col-xl-3 border-secondary-light">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <div class="media-body text-left">
+                                                <h4 class="text-warning"><%=df.format(totalLYear)%></h4>
+                                                <span style="color: #040505" class="text-dark">
+                                                    <strong> Last Year</strong>
+                                                </span>
+                                            </div>
+                                            <div class="align-self-center w-circle-icon rounded bg-success shadow-success">
+                                                <i class="icon-pie-chart text-white"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--End Row-->
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="card">
+                    <div class="card-title">INVENTORY</div>
+                    <div class="card bg-transparent shadow-none mt-3 border border-secondary-light">
+
+                        <div class="card-content">
+                            <div class="row row-group m-0">
+                                <div class="col-12 col-lg-6 col-xl-3 border-secondary-light">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <div class="media-body text-left">
+                                                <h4 class="text-info"><%=s1.size()%></h4>
+                                                <span style="color: #040505" class="text-dark">
+                                                    <strong>   Categories</strong></span>
+                                            </div>
+                                            <div class="align-self-center w-circle-icon rounded bg-success shadow-success">
+                                                <i class="icon-basket-loaded text-white"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 col-xl-3 border-secondary-light">
+                                    <div class="card-body">
+                                        <div class="media">
+                                            <div class="media-body text-left">
+                                                <h4 class="text-info"><%=s.size()%></h4>
+                                                <span style="color: #040505" class="text-dark"> 
+                                                    <strong>  Products</strong>
+                                                </span>
+                                            </div>
+                                            <div class="align-self-center w-circle-icon rounded bg-success shadow-success">
+                                                <i class="icon-basket-loaded text-white"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!--End Row-->
+                        </div>
+                    </div>
+
+                </div>
                 <!--End Number of Categories-->
-                
-                <div class="col-12 col-lg-6 col-xl-3 border-secondary-light">
-		      <div class="card-body">
-              <div class="media">
-              <div class="media-body text-left">
-                <h4 class="text-success"><%=s.size()%></h4>
-                <span style="color: #040505" class="text-dark"> Products</span>
-              </div>
-              <div class="align-self-center w-circle-icon rounded bg-success shadow-success">
-                <i class="icon-pie-chart text-white"></i></div>
-            </div>
-            </div>
-                <!--End Number of Products-->
-                <!--Start of Row-->
-              
-                
-            </div>
+
+
                 <div class="modal  fade" id="ContactModel">
                     <div class="modal-dialog ">
                         <div class="modal-content border-primary">
@@ -353,15 +554,32 @@
             });
         </script>
         <script>
+
+            $(document).ready(function() {
+                //Default data table
+//                $('#tb2').DataTable();
+
+
+                var table = $('#sales').DataTable({
+                    lengthChange: false,
+                    buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
+                });
+
+                table.buttons().container()
+                        .appendTo('#div-btn');
+
+            });
+
+
             $('document').ready(function() {
-                                                    var now = new Date();
+                var now = new Date();
 
-                                                    var day = ("0" + now.getDate()).slice(-2);
-                                                    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+                var day = ("0" + now.getDate()).slice(-2);
+                var month = ("0" + (now.getMonth() + 1)).slice(-2);
 
-                                                    var today1 = now.getFullYear() + "-" + (month) + "-" + (day);
-                                                    document.getElementById("fromdate").value = today1;
-                                                    document.getElementById("todate").value = today1;
+                var today1 = now.getFullYear() + "-" + (month) + "-" + (day);
+                document.getElementById("fromdate").value = today1;
+                document.getElementById("todate").value = today1;
                 $('.go').click(function() {
 
 //                    var fromdate = "2021-03-27";
@@ -375,15 +593,14 @@
 //                    document.getElementById("todate").value = today1;
 //                    document.getElementById("fromdate").value = today1;
                     $.ajax({
-                                                            url: "Ajax/GetSalesAjax.jsp",
-                                                            type: "POST",
-                                                            data: {fromdate: fromdate, todate: todate},
-                                                            
+                        url: "Ajax/GetSalesAjax.jsp",
+                        type: "POST",
+                        data: {fromdate: fromdate, todate: todate},
 //                    $(document).ajaxStart(function() {
 //                        alert("Start");
 //                    });
-                                                            success: function(response) {
-                                                                $('#LDiv').html(response);
+                        success: function(response) {
+                            $('#LDiv').html(response);
 //                        alert('hi112')
 //                        $(".loader").hide();
 //                        $("#tb2").hide();
@@ -391,12 +608,12 @@
 //                        $("#output").html(response);
 //                        var url = 'Invoice.jsp';
 //                        $(location).prop('href', url);
-                                                            },
-                                                            error: function(jqXHR, textStatus, errorThrown) {
-                                                                console.log(textStatus, errorThrown);
-                                                                alert("Something Went Wrong...!!!");
-                                                            }
-                                                        });
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.log(textStatus, errorThrown);
+                            alert("Something Went Wrong...!!!");
+                        }
+                    });
 //                    $.get({
 //                        
 //                        url: "Ajax/GetSalesAjax.jsp",

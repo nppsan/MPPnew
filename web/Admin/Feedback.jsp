@@ -47,7 +47,10 @@
                  
             
             
-           
+           <div class="clearfix"></div>
+
+        <div class="content-wrapper">
+            <div class="container-fluid">
                     
             <div style="margin-left: 15%" class="col-sm-10">
           <div class="card">
@@ -155,8 +158,9 @@
             <!--End footer-->
 
         </div><!--End wrapper-->
-
-
+            </div>
+            </div></div>
+        </div>
 
         <!-- Bootstrap core JavaScript-->
         <script src="assets/js/jquery.min.js"></script>

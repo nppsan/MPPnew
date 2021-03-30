@@ -440,7 +440,7 @@
                                                 </div>
                             <!--car style="display: none;"t-->   
 
-                            <div id="cart_card" class="card" style=" display: none; margin-left: 10%; margin-bottom:10%" >
+                            <div id="cart_card" class="card" style=" display: none; float:left; margin-left: 0%; width: 90%; margin-bottom:10%" >
                                 <div class="card-body">
                                     <div class="card-title">CART DETAILS</div>
                                     <hr>

@@ -282,6 +282,9 @@
                 float total = 0.00f;
                 float tCgst = 0.00f;
                 
+                DecimalFormat df = new DecimalFormat();
+                        df.setMaximumFractionDigits(1);
+                
                 
                 for(CartModel p:sp)
                 {
@@ -289,18 +292,17 @@
                     float beforeTaxAmtPerProduct = p.getPrate() * p.getQuant();
                     float taxableAmtAfterDisco = beforeTaxAmtPerProduct - (beforeTaxAmtPerProduct * p.getDisco())/100;
                     float amtOfGST =  (taxableAmtAfterDisco * 9/100);
-                        DecimalFormat df = new DecimalFormat();
-                        df.setMaximumFractionDigits(1);
-                    float formatamtOfGST = Float.parseFloat(df.format(amtOfGST));    
-                        System.out.println("df format"+df.format(amtOfGST));
-                        System.out.println("df format"+formatamtOfGST); 
+                        
+//                    float formatamtOfGST = Float.parseFloat(df.format(amtOfGST));    
+//                        System.out.println("df format"+df.format(amtOfGST));
+//                        System.out.println("df format"+formatamtOfGST); 
 //                        System.out.printf("%.2f", amtOfGST);
                     float totalAmtAfterTaxes = taxableAmtAfterDisco + amtOfGST*2;
                     total = total + taxableAmtAfterDisco;
                     gTotal = gTotal + totalAmtAfterTaxes;
                     tCgst = tCgst + amtOfGST;
                     
-                    System.out.println(gTotal);
+//                    System.out.println(gTotal);
 %>
                 <tr style=" font-size:13px; color:#000; padding:5px; font-family: 'Muli', sans-serif;">
                   <td height="30" align="center"><%=i%>.</td>
@@ -308,16 +310,16 @@
                   <td align="center"><%=p.getSac()%></td>
                   <td align="center"><%=p.getQuant()%></td>
                   <td align="center"><%=p.getPrate()%></td>
-                  <td align="center"><%=beforeTaxAmtPerProduct%></td>
+                  <td align="center"><%=df.format(beforeTaxAmtPerProduct)%></td>
                   <td align="center"><%=p.getDisco()%></td>
-                  <td align="center"><%=taxableAmtAfterDisco%></td>
+                  <td align="center"><%=df.format(taxableAmtAfterDisco)%></td>
                   <td align="center">9</td>
-                  <td align="center"><%=amtOfGST%></td>
+                  <td align="center"><%=df.format(amtOfGST)%></td>
                   <td align="center">9</td>
-                  <td align="center"><%=amtOfGST%></td>
+                  <td align="center"><%=df.format(amtOfGST)%></td>
                   <td align="center">0</td>
                   <td align="center">0</td>
-                  <td align="center"><%=totalAmtAfterTaxes%></td>
+                  <td align="center"><%=df.format(totalAmtAfterTaxes)%></td>
                   
                 </tr>
 <%
@@ -340,7 +342,7 @@
                   <tr>
                       <td>&nbsp;</td>
                       <td style="height: 32px"> &nbsp;&nbsp; Total Amount before Tax  (Rs.) </td>
-                      <td align="center" style="height: 32px"><%=total%></td>
+                      <td align="center" style="height: 32px"><%=df.format(total)%></td>
                   </tr>
                   
                   
@@ -349,14 +351,14 @@
                       <td id="aiw" rowspan="5">Total Invoice Amount (in words):- Rupees <span id="words"></span></td>
                       <td style="height: 32px"> &nbsp;&nbsp; Total Amount of CGST  (Rs.)</td>
                       
-                      <td align="center" style="height: 32px"><%=tCgst%></td>
+                      <td align="center" style="height: 32px"><%=df.format(tCgst)%></td>
                       
                   </tr>
               
                   <tr>
                       <!--<td rowspan="2" style="padding:3px 50px 5px 10px">Total Invoice Amount (in words)</td>-->
                       <td style="height: 32px"> &nbsp;&nbsp; Total Amount of SGST  (Rs.)</td>
-                      <td align="center" style="height: 32px"><%=tCgst%></td>
+                      <td align="center" style="height: 32px"><%=df.format(tCgst)%></td>
                   </tr>
             
                   <tr style="height: 32px">
@@ -367,12 +369,12 @@
                   <tr style="height: 32px">
                      
                       <td > &nbsp;&nbsp; Total Tax Amount:GST  (Rs.)</td>
-                      <td align="center"><%=tCgst*2%></td>
+                      <td align="center"><%=df.format(tCgst*2)%></td>
                   </tr>
                   <tr style="height: 32px">
                      
                       <td > &nbsp;&nbsp; Total Amount After TAX  (Rs.)</td>
-                      <td align="center"><%=gTotal%></td>
+                      <td align="center"><%=df.format(gTotal)%></td>
                   </tr>
 <%
                     int gTIW = (int)gTotal;
@@ -403,7 +405,7 @@ If you have any query concerning this invoice, contact us with above details.
                       <h6>#This is the computer generated invoice needs no stamp or signature.</h6>
                   </td>
                   <td align="center"><strong>Grand Total</strong></td>
-                  <td align="center" style="width: 150px"><strong><%=gTotal%></strong></td>
+                  <td align="center" style="width: 150px"><strong><%=df.format(gTotal)%></strong></td>
                   <!--<td align="center">&nbsp;</td>-->
                 </tr>
               </tbody>

@@ -38,24 +38,25 @@
                 float gTotal = 0.00f;
                 float total = 0.00f;
                 float tCgst = 0.00f;
+                DecimalFormat df = new DecimalFormat();
+                        df.setMaximumFractionDigits(1);
         for(CartModel p:cm)
         {
-//            i++;
-//                    float beforeTaxAmtPerProduct = p.getPrate() * p.getQuant();
-//                    float taxableAmtAfterDisco = beforeTaxAmtPerProduct - (beforeTaxAmtPerProduct * p.getDisco())/100;
-//                    float amtOfGST =  (taxableAmtAfterDisco * 9/100);
-//                        DecimalFormat df = new DecimalFormat();
-//                        df.setMaximumFractionDigits(1);
+            i++;
+                    float beforeTaxAmtPerProduct = p.getPrate() * p.getQuant();
+                    float taxableAmtAfterDisco = beforeTaxAmtPerProduct - (beforeTaxAmtPerProduct * p.getDisco())/100;
+                    float amtOfGST =  (taxableAmtAfterDisco * 9/100);
+                        
 //                    float formatamtOfGST = Float.parseFloat(df.format(amtOfGST));    
-//                        System.out.println("df format"+df.format(amtOfGST));
+                        System.out.println("df format"+df.format(amtOfGST));
 //                        System.out.println("df format"+formatamtOfGST); 
-////                        System.out.printf("%.2f", amtOfGST);
-//                    float totalAmtAfterTaxes = taxableAmtAfterDisco + amtOfGST*2;
-//                    total = total + taxableAmtAfterDisco;
-//                    gTotal = gTotal + totalAmtAfterTaxes;
-//                    tCgst = tCgst + amtOfGST;
-//                    
-//                    System.out.println(gTotal);
+//                        System.out.printf("%.2f", amtOfGST);
+                    float totalAmtAfterTaxes = taxableAmtAfterDisco + amtOfGST*2;
+                    total = total + taxableAmtAfterDisco;
+                    gTotal = gTotal + totalAmtAfterTaxes;
+                    tCgst = tCgst + amtOfGST;
+                    
+                    System.out.println(gTotal);
             SaleProductModel sp = new SaleProductModel();
 //            sp.setAmt(gTotal);
             sp.setAmt(p.getAmt());
@@ -73,6 +74,7 @@
         SalesModel sm = new SalesModel();
         bdm = bdd.getByNaturalId(cm.get(0).getInvNum());
         System.out.println(bdm.getInvDate());
+        sm.setFinalBillAmt(gTotal);
         sm.setInvDate(bdm.getInvDate());
         sm.setInvNum(cm.get(0).getInvNum());
         sm.setBid(bdm.getId());
