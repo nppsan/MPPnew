@@ -206,7 +206,69 @@
 
                                     <div class="table-responsive">
                                         <div id="LDiv">
+                                            <table id="sales" class="table table-bordered" style="text-align: center; width: available; display:none">
+        <thead>
+            <tr>
+                <td>#</td>
+                <th>Customer ID</th>
+                <th>Bill ID</th>
 
+
+                <th>Invoice Date</th>
+                <th>Invoice Number</th>
+                <th style="text-align: left">Sale Amount</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <%
+//                int i2 = 1;
+//                float total = 0;
+//                for (SalesModel h5 : finalList) {
+            %>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+<%
+//            String invDate = h5.getInvDate();
+//            String yyyy = invDate.substring(0, 4);
+//            String mm = invDate.substring(5,7 );
+//            String dd = invDate.substring(8, 10);
+%>
+                <td>4</td>
+                <%
+//                    total = total + h5.getFinalBillAmt();
+
+                %>    
+
+                <td>5</td>
+                <td style="text-align: right">6</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+            </tr>     
+            <%
+//                    i2++;
+//                }
+
+
+            %>
+            <!--<tr></tr>-->
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="color: whitesmoke; background-color: black">Total</td>
+                <td style="color: white; background-color: black"><%%></td>
+            </tr>
+
+
+        </tbody>
+
+    </table>
                                         </div>
                                     </div>
                                 </div>
@@ -313,13 +375,13 @@
 //                $('#tb2').DataTable();
 
 
-                var table = $('#sales').DataTable({
-                    lengthChange: false,
-                    buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
-                });
-
-                table.buttons().container()
-                        .appendTo('#div-btn');
+//                var table = $('#sales').DataTable({
+//                    lengthChange: false,
+//                    buttons: ['copy', 'excel', 'pdf', 'print', 'colvis']
+//                });
+//
+//                table.buttons().container()
+//                        .appendTo('#div-btn');
 
             });
 

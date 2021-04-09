@@ -88,12 +88,18 @@
 //        int inv = cd1.getInvNum();
 //        System.out.println(""+inv);
         //inv+=1;
-//        System.out.println("inv number"+request.getParameter("innumber"));
-//        int inv = Integer.parseInt(request.getParameter("innumber"));
-//        System.out.println(""+inv);
+//        System.out.println("inv number"+request.getParameter("innumber3"));
+    int inv;
+    if(request.getParameter("inv")!= null){    
+         inv = Integer.parseInt(request.getParameter("inv"));}
+//        inv1.trim();
+//        Integer inv2 = Integer.valueOf(inv1);
+//        System.out.println(inv2);
+//        System.out.println(inv1.trim());
+    else{
         List<SalesModel> s2 = new SalesDao().getAll();
             int max = s2.size();
-            int inv;
+            
             if (max == 0) {
                 inv = 1000;
             } else {
@@ -102,7 +108,7 @@
                 inv = cd.getInvNum();
             }
 //            inv += 1;
-            System.out.println(""+inv);
+            System.out.println("innumber"+inv);}
     %>
     <%
         SalesModel sm = new SalesDao().getByNaturalId(inv);
@@ -275,8 +281,10 @@
                 </tr>
                 
                 <!--products start-->
-<%        
+<%              List<SaleProductModel> spm = sm.getProducts();
+                System.out.println(spm);
                 List<CartModel> sp = new CartDao().getAll();
+                System.out.println(spm);
                 int i=0;
                 float gTotal = 0.00f;
                 float total = 0.00f;
@@ -286,7 +294,7 @@
                         df.setMaximumFractionDigits(1);
                 
                 
-                for(CartModel p:sp)
+                for(SaleProductModel p:spm)
                 {
                     i++;
                     float beforeTaxAmtPerProduct = p.getPrate() * p.getQuant();

@@ -109,7 +109,8 @@
 
                                 <select class="form-control" id="select1" style="width: 100%; " name="Category"   required="required">
                                     <option> </option>
-                                    <%                    List<CategoryModel> s = new CategoryDao().getAll();
+                                    <%                    
+                                        List<CategoryModel> s = new CategoryDao().getAll();
                                         for (CategoryModel p : s) {
 
                                     %>

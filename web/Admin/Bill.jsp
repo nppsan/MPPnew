@@ -145,7 +145,7 @@
                             <form style="display: none;" id="form1" action="../AddCustDetailsServlet" method="POST"> 
 
                                 <div style=" display:inline"  class="col-sm-11">
-                                    <input  name="innumber" value="<%=inv%>" type="hidden" id="innumber" readonly="readonly" class="form-control">
+                                    <input  name="innumber1" value="<%=inv%>" type="hidden" id="innumber" readonly="readonly" class="form-control">
                                     <!--<label style="float:right" for="readonly-input" class="col-sm-3 col-form-label">Invoice Number</label>-->
                                     <div id="output" class="col-sm-11">
                                         <div class="card">
@@ -226,7 +226,7 @@
                                     <div class="row">
                             <form style="display: none;" id="form2" > 
                                 <div style=" display:inline; " class="col-sm-11">
-                                    <input name="innumber" value="<%=inv%>" type="hidden" id="invNum" readonly="readonly" class="form-control">
+                                    <input name="innumber2" value="<%=inv%>" type="hidden" id="invNum" readonly="readonly" class="form-control">
                                     <!--<label style="float:right" for="readonly-input" class="col-sm-3 col-form-label">Invoice Number</label>-->
 
                                     <div class="card" style="width: 150%">
@@ -353,7 +353,7 @@
                                     </div>
                                     <div class="row">
                             <form style="display: none;" id="form3" action="../AddCustDetailsServlet" method="POST"> 
-                                <input  name="innumber" value="<%=inv%>" type="hidden" id="invNumP" readonly="readonly" class="form-control">
+                                <input  name="inv" value="<%=inv%>" type="hidden" id="invNumP" readonly="readonly" class="form-control">
 
 
 
@@ -555,8 +555,8 @@
                                                         $('.deleteID').click(function() {
 
 //deelteID
-                                                            var MemId = this.id;
-                                                            alert("ffff" + MemId);
+//                                                            var MemId = this.id;
+//                                                            alert("ffff" + MemId);
 
 //                    $('.myid').click(function() {
 //
@@ -763,7 +763,7 @@
                                                         $("#form2").show();
                                                         var container = document.getElementById("outcid");
                                                         var cid = document.getElementById("cid").value;
-                                                        alert(cid);
+//                                                        alert(cid);
                                                         while (container.hasChildNodes())
                                                         {
                                                             container.removeChild(container.lastChild);
