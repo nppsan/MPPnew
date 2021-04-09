@@ -113,6 +113,10 @@
             <a href="Feedback.jsp" class="waves-effect">
                 <i class="icon-note"></i> <span>Feedback</span> 
             </a></li>
+            <li>
+            <a href="Report.jsp" class="waves-effect">
+                <i class="icon-note"></i> <span>Report</span> 
+            </a></li>
              <li>
             <a href="../AdminLogoutServlet" class="waves-effect">
                 <i class="icon-note"></i> <span>Logout</span> 

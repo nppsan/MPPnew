@@ -1,3 +1,9 @@
+<%-- 
+    Document   : Report
+    Created on : 9 Apr, 2021, 8:18:49 AM
+    Author     : NPP
+--%>
+
 
 <%@page import="java.time.LocalDateTime"%>
 <%@page import="java.time.format.DateTimeFormatter"%>
@@ -16,7 +22,7 @@
 <%@page import="Com.Admin.Dao.ProductDao"%>
 <%@page import="java.text.ParseException"%>
 <%@page import="java.time.temporal.ChronoUnit"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" session="false"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" session="false"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
 <%    HttpSession sessions = request.getSession(false);
@@ -175,7 +181,7 @@
             <div class="content-wrapper">
                 <div class="container-fluid">
 
-                    <div style="display:none" class="row">
+                    <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header d100">
@@ -703,3 +709,4 @@
 
     <!-- Mirrored from codervent.com/rocker/color-version/table-data-tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Sep 2018 13:53:17 GMT -->
 </html>
+

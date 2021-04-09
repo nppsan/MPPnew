@@ -68,8 +68,13 @@
                 <td><%=i2%></td>
                 <td><%=h5.getCid()%></td>
                 <td><%=h5.getBid()%></td>
-
-                <td><%=h5.getInvDate()%></td>
+<%
+            String invDate = h5.getInvDate();
+            String yyyy = invDate.substring(0, 4);
+            String mm = invDate.substring(5,7 );
+            String dd = invDate.substring(8, 10);
+%>
+                <td><%=dd+"-"+mm+"-"+yyyy%></td>
                 <%
                     total = total + h5.getFinalBillAmt();
 
