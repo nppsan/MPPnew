@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package Com.Admin.Controller;
+//package Com.Admin.Controller;
 
 import Com.Admin.Dao.FeedbackDao;
 import Com.Admin.Model.FeedbackModel;
@@ -51,7 +51,7 @@ public class FeedbackServlet extends HttpServlet {
             
             
             
-            System.out.println(" Name" + name);
+//            System.out.println(" Name" + name);
             FeedbackModel c = new FeedbackModel();
             c.setName(name);
             c.setSub(subject);
@@ -65,15 +65,15 @@ public class FeedbackServlet extends HttpServlet {
             temp = fd.save(c);
             if (temp) {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Category saved Sucessfully  !!');");
-                out.println("location='Admin/Category.jsp';");
+//                out.println("alert('Category saved Sucessfully  !!');");
+                out.println("location='index1.jsp';");
                 out.println("</script>");
 //                response.sendRedirect("register.jsp");
                 
             } else {
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('Category not save !!');");
-                out.println("location='Admin/Category.jsp';");
+                out.println("location='index1.jsp';");
                 out.println("</script>");
 //                response.sendRedirect("register.jsp");
             }

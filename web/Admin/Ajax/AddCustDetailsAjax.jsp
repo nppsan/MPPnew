@@ -21,10 +21,10 @@
 
            
            
-           System.out.println("/AddCustDetailsServelet");
-           System.out.println("Invoice Numb" + invNum);
-           System.out.println("Customer Name "+ custName );
-           
+//           System.out.println("/AddCustDetailsServelet");
+//           System.out.println("Invoice Numb" + invNum);
+//           System.out.println("Customer Name "+ custName );
+//           
            CustDetailsModel p = new CustDetailsModel();
             
            p.setAddrAP(addrAP);
@@ -34,7 +34,7 @@
            p.setCustName(custName);
            p.setEmail(email);
            p.setGstnAadhar(gstnAadhar);
-           p.setInvNum(invNum);
+//           p.setInvNum(invNum);
            p.setMobile(mobile);
            p.setStateCode(stateCode);
             
@@ -44,7 +44,7 @@
             temp = pd.save(p);
             if (temp) {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Customer Details saved Sucessfully  !!');");
+//                out.println("alert('Customer Details saved Sucessfully  !!');");
                 out.println("location='Admin/Bill.jsp';");
                 out.println("</script>");
 //                response.sendRedirect("register.jsp");

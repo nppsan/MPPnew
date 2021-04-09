@@ -55,8 +55,8 @@ public class CategoryServelet extends HttpServlet {
             String Category = request.getParameter("Category");
             
             
-            System.out.println("/CategoryServelet");
-            System.out.println("Category Name" + Category);
+//            System.out.println("/CategoryServelet");
+//            System.out.println("Category Name" + Category);
             CategoryModel c = new CategoryModel();
             c.setCategory(Category);
             
@@ -66,7 +66,7 @@ public class CategoryServelet extends HttpServlet {
             temp = cd.save(c);
             if (temp) {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Category saved Sucessfully  !!');");
+//                out.println("alert('Category saved Sucessfully  !!');");
                 out.println("location='Admin/Category.jsp';");
                 out.println("</script>");
 //                response.sendRedirect("register.jsp");

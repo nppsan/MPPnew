@@ -158,8 +158,8 @@
                             type = $(this).find('option:selected').attr('name');
                             document.getElementById('ctype').setAttribute("value", type);
                             document.getElementById('cid').setAttribute("value", catid);
-                            alert(catid);
-                            alert(type);
+//                            alert(catid);
+//                            alert(type);
                             cookievalue = escape(type) + ";";
                             document.cookie = "cname=" + cookievalue;
                             cookievalue = escape(catid) + ";";

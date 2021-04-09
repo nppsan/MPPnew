@@ -65,7 +65,7 @@ public class CategoryUpdateServelet extends HttpServlet {
 
      
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Category Updated Sucessfully  !!');");
+//                out.println("alert('Category Updated Sucessfully  !!');");
                 out.println("location='Admin/Category.jsp';");
                 out.println("</script>");
                    }

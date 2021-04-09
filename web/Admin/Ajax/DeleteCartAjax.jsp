@@ -14,7 +14,7 @@
 //            invNum pname prate quant amt disco    
         long id = Long.parseLong(request.getParameter("MemId"));
         
-        System.out.println(id);
+//        System.out.println(id);
         
         CartDao cd = new CartDao();
         

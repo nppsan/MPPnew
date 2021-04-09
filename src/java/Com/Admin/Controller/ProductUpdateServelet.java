@@ -6,9 +6,7 @@
 
 package Com.Admin.Controller;
 
-import Com.Admin.Dao.CategoryDao;
 import Com.Admin.Dao.ProductDao;
-import Com.Admin.Model.CategoryModel;
 import Com.Admin.Model.ProductModel;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -76,7 +74,7 @@ public class ProductUpdateServelet extends HttpServlet {
 
      
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Product Updated Sucessfully  !!');");
+//                out.println("alert('Product Updated Sucessfully  !!');");
                 out.println("location='Admin/AddProduct.jsp';");
                 out.println("</script>");
            

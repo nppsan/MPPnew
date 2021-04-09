@@ -28,10 +28,10 @@
         String consState = request.getParameter("consState");
         int consStateCode = Integer.parseInt(request.getParameter("consStateCode"));
         
-        System.out.println("/AddBillDetailsServelet");
-        System.out.println("Invoice Numb" + invNum);
-        System.out.println("Customer Name "+ consName );
-        System.out.println("Customer ID "+ cid );
+//        System.out.println("/AddBillDetailsServelet");
+//        System.out.println("Invoice Numb" + invNum);
+//        System.out.println("Customer Name "+ consName );
+//        System.out.println("Customer ID "+ cid );
         
         
         BillDetailsModel b = new BillDetailsModel();

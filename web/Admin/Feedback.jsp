@@ -52,7 +52,7 @@
         <div class="content-wrapper">
             <div class="container-fluid">
                     
-            <div style="margin-left: 15%" class="col-sm-10">
+            <div  class="col-sm-11">
           <div class="card">
             <div class="card-header">
                 <i class="fa fa-table"></i>

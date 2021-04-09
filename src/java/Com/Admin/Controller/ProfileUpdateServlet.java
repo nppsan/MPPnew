@@ -58,7 +58,7 @@ public class ProfileUpdateServlet extends HttpServlet {
             ud.Update(u);
             
            out.println("<script type=\"text/javascript\">");
-                out.println("alert('Profile Updated Sucessfully  !!');");
+//                out.println("alert('Profile Updated Sucessfully  !!');");
                 out.println("location='Admin/Profile.jsp';");
                 out.println("</script>");
 

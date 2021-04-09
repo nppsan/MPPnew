@@ -106,8 +106,8 @@ public class AddProductServelet extends HttpServlet {
             temp = pd.save(p);
             if (temp) {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Product saved Sucessfully  !!');");
-                out.println("location='Admin/AdminHome.jsp';");
+//                out.println("alert('Product saved Sucessfully  !!');");
+                out.println("location='Admin/AddProduct.jsp';");
                 out.println("</script>");
 //                response.sendRedirect("register.jsp");
                 

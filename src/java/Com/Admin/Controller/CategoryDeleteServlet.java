@@ -58,7 +58,7 @@ public class CategoryDeleteServlet extends HttpServlet {
             
      
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Category Deleted Sucessfully  !!');");
+//                out.println("alert('Category Deleted Sucessfully  !!');");
                 out.println("location='Admin/Category.jsp';");    
                 out.println("</script>");
         }

@@ -16,8 +16,8 @@
 <%
     String fromdate = request.getParameter("fromdate");
     String todate1 = request.getParameter("todate");
-    System.out.println(fromdate);
-    System.out.println(todate1);
+//    System.out.println(fromdate);
+//    System.out.println(todate1);
     DecimalFormat df = new DecimalFormat();
     df.setMaximumFractionDigits(1);
 

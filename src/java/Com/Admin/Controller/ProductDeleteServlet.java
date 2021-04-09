@@ -6,7 +6,6 @@
 
 package Com.Admin.Controller;
 
-import Com.Admin.Dao.CategoryDao;
 import Com.Admin.Dao.ProductDao;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -59,7 +58,7 @@ public class ProductDeleteServlet extends HttpServlet {
             
      
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Product Deleted Sucessfully  !!');");
+//                out.println("alert('Product Deleted Sucessfully  !!');");
                 out.println("location='Admin/AddProduct.jsp';");    
                 out.println("</script>");
         }

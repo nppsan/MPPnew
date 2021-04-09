@@ -52,13 +52,13 @@ public class FeedbackDeleteServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             String id= request.getParameter("id");
-            System.out.println("Id"+id);
+//            System.out.println("Id"+id);
             FeedbackDao cd= new FeedbackDao();
             cd.Delete(Long.parseLong(id));
             
      
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Feedback Deleted Sucessfully  !!');");
+//                out.println("alert('Feedback Deleted Sucessfully  !!');");
                 out.println("location='Admin/Feedback.jsp';");    
                 out.println("</script>");
         }

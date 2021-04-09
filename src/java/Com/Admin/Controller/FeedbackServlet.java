@@ -51,7 +51,7 @@ public class FeedbackServlet extends HttpServlet {
             
             
             
-            System.out.println(" Name" + name);
+//            System.out.println(" Name" + name);
             FeedbackModel c = new FeedbackModel();
             c.setName(name);
             c.setSub(subject);
@@ -65,15 +65,15 @@ public class FeedbackServlet extends HttpServlet {
             temp = fd.save(c);
             if (temp) {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Feedback Sent Sucessfully  !!');");
+//                out.println("alert('Feedback Sent Sucessfully  !!');");
                 out.println("location='index1.jsp';");
                 out.println("</script>");
 //                response.sendRedirect("register.jsp");
                 
             } else {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Category not save !!');");
-                out.println("location='Admin/Category.jsp';");
+                out.println("alert('Feedback not sent!!');");
+                out.println("location='index1.jsp';");
                 out.println("</script>");
 //                response.sendRedirect("register.jsp");
             }

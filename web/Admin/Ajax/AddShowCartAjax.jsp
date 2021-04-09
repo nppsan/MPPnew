@@ -27,10 +27,10 @@
         float disco = Float.parseFloat(request.getParameter("disco"));
         
         
-        System.out.println("/AddShowCartAjax");
-        System.out.println("ajax page" + invNum);
-        System.out.println("Invoice Numb " + invNum);
-        System.out.println("Product Name " + pname );
+//        System.out.println("/AddShowCartAjax");
+//        System.out.println("ajax page" + invNum);
+//        System.out.println("Invoice Numb " + invNum);
+//        System.out.println("Product Name " + pname );
         
         
         CartModel c = new CartModel();

@@ -30,10 +30,10 @@
 //        sm.setProducts(sp);
 //        SalesDao sd = new SalesDao();
 //        sd.save(sm); 
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('In final cart');");
+//                out.println("<script type=\"text/javascript\">");
+//                out.println("alert('In final cart');");
 //                out.println("location='Admin/Login.jsp';");
-                out.println("</script>");
+//                out.println("</script>");
                 int i=0;
                 float gTotal = 0.00f;
                 float total = 0.00f;
@@ -48,7 +48,7 @@
                     float amtOfGST =  (taxableAmtAfterDisco * 9/100);
                         
 //                    float formatamtOfGST = Float.parseFloat(df.format(amtOfGST));    
-                        System.out.println("df format"+df.format(amtOfGST));
+//                        System.out.println("df format"+df.format(amtOfGST));
 //                        System.out.println("df format"+formatamtOfGST); 
 //                        System.out.printf("%.2f", amtOfGST);
                     float totalAmtAfterTaxes = taxableAmtAfterDisco + amtOfGST*2;
@@ -56,7 +56,7 @@
                     gTotal = gTotal + totalAmtAfterTaxes;
                     tCgst = tCgst + amtOfGST;
                     
-                    System.out.println(gTotal);
+//                    System.out.println(gTotal);
             SaleProductModel sp = new SaleProductModel();
 //            sp.setAmt(gTotal);
             sp.setAmt(p.getAmt());
@@ -73,7 +73,7 @@
         }
         SalesModel sm = new SalesModel();
         bdm = bdd.getByNaturalId(cm.get(0).getInvNum());
-        System.out.println(bdm.getInvDate());
+//        System.out.println(bdm.getInvDate());
         sm.setFinalBillAmt(gTotal);
         sm.setInvDate(bdm.getInvDate());
         sm.setInvNum(cm.get(0).getInvNum());

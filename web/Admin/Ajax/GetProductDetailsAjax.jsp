@@ -5,7 +5,7 @@
 <%
     String id = request.getParameter("username");
     
-    System.out.println("inajax" + id);
+//    System.out.println("inajax" + id);
     
     ProductDao pd = new ProductDao();
     

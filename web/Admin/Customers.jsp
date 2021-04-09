@@ -246,7 +246,7 @@
 
 
                                 var table = $('#tb2').DataTable({
-                                    lengthChange: false,
+                                    lengthChange: true,
                                     buttons: ['copy', 'excel', 'pdf', 'print']
                                 });
 

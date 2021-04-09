@@ -51,9 +51,9 @@ public class AddCustDetailsServlet extends HttpServlet {
            int stateCode= Integer.parseInt(request.getParameter("cstcode"));
            
             
-            System.out.println("/AddCustDetailsServelet");
-            //System.out.println("Invoice Numb" + invNum);
-            System.out.println("Customer Name "+ custName );
+//            System.out.println("/AddCustDetailsServelet");
+//            //System.out.println("Invoice Numb" + invNum);
+//            System.out.println("Customer Name "+ custName );
            
             CustDetailsModel p = new CustDetailsModel();
             
@@ -74,7 +74,7 @@ public class AddCustDetailsServlet extends HttpServlet {
             temp = pd.save(p);
             if (temp) {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Customer Details saved Sucessfully  !!');");
+//                out.println("alert('Customer Details saved Sucessfully  !!');");
                 out.println("location='Admin/Bill.jsp';");
                 out.println("</script>");
 //                response.sendRedirect("register.jsp");
